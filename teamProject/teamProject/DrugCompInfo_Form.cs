@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace teamProject
 {
-    public partial class DrugComp_info : Form
+    public partial class DrugCompInfo_Form : Form
     {
-        public DrugComp_info()
+        public DrugCompInfo_Form()
         {
             InitializeComponent();
         }

@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DrugComp_info.cs">
+    <Compile Include="DrugCompInfo_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DrugComp_info.Designer.cs">
-      <DependentUpon>DrugComp_info.cs</DependentUpon>
+    <Compile Include="DrugCompInfo_Form.Designer.cs">
+      <DependentUpon>DrugCompInfo_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DrugOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DrugOrderForm.Designer.cs">
+      <DependentUpon>DrugOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\googling_VerticalTextBox.cs">
       <SubType>Component</SubType>
@@ -63,8 +69,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DrugComp_info.resx">
-      <DependentUpon>DrugComp_info.cs</DependentUpon>
+    <EmbeddedResource Include="DrugCompInfo_Form.resx">
+      <DependentUpon>DrugCompInfo_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DrugOrderForm.resx">
+      <DependentUpon>DrugOrderForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

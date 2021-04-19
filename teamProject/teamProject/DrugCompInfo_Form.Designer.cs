@@ -1,7 +1,7 @@
 ﻿
 namespace teamProject
 {
-    partial class DrugComp_info
+    partial class DrugCompInfo_Form
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,6 @@ namespace teamProject
             this.compTitle = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
-            this.compSubTitle = new System.Windows.Forms.Label();
             this.compName = new System.Windows.Forms.Label();
             this.compName_txtBox = new VerticalTextBox();
             this.btn_DrugComp_Edit = new System.Windows.Forms.Button();
@@ -43,6 +42,8 @@ namespace teamProject
             this.compId_txtBox = new VerticalTextBox();
             this.compID = new System.Windows.Forms.Label();
             this.btn_DrugComp_Search = new System.Windows.Forms.Button();
+            this.compSubTitle = new System.Windows.Forms.GroupBox();
+            this.compSubTitle.SuspendLayout();
             this.SuspendLayout();
             // 
             // compTitle
@@ -60,7 +61,7 @@ namespace teamProject
             this.listView1.HideSelection = false;
             this.listView1.Location = new System.Drawing.Point(44, 83);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(920, 442);
+            this.listView1.Size = new System.Drawing.Size(920, 407);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
@@ -75,21 +76,11 @@ namespace teamProject
             this.label2.TabIndex = 2;
             this.label2.Text = "데이터바인딩 필요";
             // 
-            // compSubTitle
-            // 
-            this.compSubTitle.AutoSize = true;
-            this.compSubTitle.Font = new System.Drawing.Font("맑은 고딕", 12F);
-            this.compSubTitle.Location = new System.Drawing.Point(40, 561);
-            this.compSubTitle.Name = "compSubTitle";
-            this.compSubTitle.Size = new System.Drawing.Size(58, 21);
-            this.compSubTitle.TabIndex = 3;
-            this.compSubTitle.Text = "제약사";
-            // 
             // compName
             // 
             this.compName.AutoSize = true;
             this.compName.Font = new System.Drawing.Font("맑은 고딕", 11F);
-            this.compName.Location = new System.Drawing.Point(40, 608);
+            this.compName.Location = new System.Drawing.Point(30, 53);
             this.compName.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.compName.Name = "compName";
             this.compName.Size = new System.Drawing.Size(69, 20);
@@ -102,7 +93,7 @@ namespace teamProject
             this.compName_txtBox.BorderColor = System.Drawing.Color.Gray;
             this.compName_txtBox.Font = new System.Drawing.Font("굴림", 11F);
             this.compName_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compName_txtBox.Location = new System.Drawing.Point(170, 599);
+            this.compName_txtBox.Location = new System.Drawing.Point(160, 44);
             this.compName_txtBox.Name = "compName_txtBox";
             this.compName_txtBox.Size = new System.Drawing.Size(200, 39);
             this.compName_txtBox.TabIndex = 5;
@@ -112,7 +103,7 @@ namespace teamProject
             // 
             this.btn_DrugComp_Edit.FlatAppearance.BorderSize = 0;
             this.btn_DrugComp_Edit.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_DrugComp_Edit.Location = new System.Drawing.Point(809, 650);
+            this.btn_DrugComp_Edit.Location = new System.Drawing.Point(747, 95);
             this.btn_DrugComp_Edit.Margin = new System.Windows.Forms.Padding(5);
             this.btn_DrugComp_Edit.Name = "btn_DrugComp_Edit";
             this.btn_DrugComp_Edit.Size = new System.Drawing.Size(70, 39);
@@ -124,7 +115,7 @@ namespace teamProject
             // 
             this.btn_DrugComp_Del.FlatAppearance.BorderSize = 0;
             this.btn_DrugComp_Del.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_DrugComp_Del.Location = new System.Drawing.Point(894, 650);
+            this.btn_DrugComp_Del.Location = new System.Drawing.Point(829, 95);
             this.btn_DrugComp_Del.Margin = new System.Windows.Forms.Padding(5);
             this.btn_DrugComp_Del.Name = "btn_DrugComp_Del";
             this.btn_DrugComp_Del.Size = new System.Drawing.Size(70, 39);
@@ -136,7 +127,7 @@ namespace teamProject
             // 
             this.compTel.AutoSize = true;
             this.compTel.Font = new System.Drawing.Font("맑은 고딕", 11F);
-            this.compTel.Location = new System.Drawing.Point(40, 660);
+            this.compTel.Location = new System.Drawing.Point(30, 105);
             this.compTel.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
             this.compTel.Name = "compTel";
             this.compTel.Size = new System.Drawing.Size(119, 20);
@@ -149,7 +140,7 @@ namespace teamProject
             this.compTel_txtBox.BorderColor = System.Drawing.Color.Gray;
             this.compTel_txtBox.Font = new System.Drawing.Font("굴림", 11F);
             this.compTel_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compTel_txtBox.Location = new System.Drawing.Point(170, 650);
+            this.compTel_txtBox.Location = new System.Drawing.Point(160, 95);
             this.compTel_txtBox.Name = "compTel_txtBox";
             this.compTel_txtBox.Size = new System.Drawing.Size(200, 39);
             this.compTel_txtBox.TabIndex = 9;
@@ -159,7 +150,7 @@ namespace teamProject
             // 
             this.btn_DrugComp_Add.FlatAppearance.BorderSize = 0;
             this.btn_DrugComp_Add.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_DrugComp_Add.Location = new System.Drawing.Point(724, 650);
+            this.btn_DrugComp_Add.Location = new System.Drawing.Point(665, 95);
             this.btn_DrugComp_Add.Margin = new System.Windows.Forms.Padding(5);
             this.btn_DrugComp_Add.Name = "btn_DrugComp_Add";
             this.btn_DrugComp_Add.Size = new System.Drawing.Size(70, 39);
@@ -202,7 +193,24 @@ namespace teamProject
             this.btn_DrugComp_Search.Text = "검색";
             this.btn_DrugComp_Search.UseVisualStyleBackColor = true;
             // 
-            // DrugComp_info
+            // compSubTitle
+            // 
+            this.compSubTitle.Controls.Add(this.compName_txtBox);
+            this.compSubTitle.Controls.Add(this.compName);
+            this.compSubTitle.Controls.Add(this.compTel);
+            this.compSubTitle.Controls.Add(this.btn_DrugComp_Del);
+            this.compSubTitle.Controls.Add(this.btn_DrugComp_Add);
+            this.compSubTitle.Controls.Add(this.btn_DrugComp_Edit);
+            this.compSubTitle.Controls.Add(this.compTel_txtBox);
+            this.compSubTitle.Font = new System.Drawing.Font("맑은 고딕", 12F);
+            this.compSubTitle.Location = new System.Drawing.Point(44, 518);
+            this.compSubTitle.Name = "compSubTitle";
+            this.compSubTitle.Size = new System.Drawing.Size(920, 155);
+            this.compSubTitle.TabIndex = 14;
+            this.compSubTitle.TabStop = false;
+            this.compSubTitle.Text = "제약사";
+            // 
+            // DrugCompInfo_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -211,21 +219,16 @@ namespace teamProject
             this.Controls.Add(this.btn_DrugComp_Search);
             this.Controls.Add(this.compId_txtBox);
             this.Controls.Add(this.compID);
-            this.Controls.Add(this.btn_DrugComp_Add);
-            this.Controls.Add(this.compTel_txtBox);
-            this.Controls.Add(this.compTel);
-            this.Controls.Add(this.btn_DrugComp_Del);
-            this.Controls.Add(this.btn_DrugComp_Edit);
-            this.Controls.Add(this.compName_txtBox);
-            this.Controls.Add(this.compName);
-            this.Controls.Add(this.compSubTitle);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.compTitle);
+            this.Controls.Add(this.compSubTitle);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "DrugComp_info";
+            this.Name = "DrugCompInfo_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DrugComp_info";
+            this.compSubTitle.ResumeLayout(false);
+            this.compSubTitle.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,7 +239,6 @@ namespace teamProject
         private System.Windows.Forms.Label compTitle;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label compSubTitle;
         private System.Windows.Forms.Label compName;
         private VerticalTextBox compName_txtBox;
         private System.Windows.Forms.Button btn_DrugComp_Edit;
@@ -247,5 +249,6 @@ namespace teamProject
         private VerticalTextBox compId_txtBox;
         private System.Windows.Forms.Label compID;
         private System.Windows.Forms.Button btn_DrugComp_Search;
+        private System.Windows.Forms.GroupBox compSubTitle;
     }
 }
