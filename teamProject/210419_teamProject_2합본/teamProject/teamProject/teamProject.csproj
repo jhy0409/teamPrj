@@ -47,46 +47,46 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DrugCompInfo_Form.cs">
+    <Compile Include="UI\DrugCompInfo_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DrugCompInfo_Form.Designer.cs">
+    <Compile Include="UI\DrugCompInfo_Form.Designer.cs">
       <DependentUpon>DrugCompInfo_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="DrugOrderForm.cs">
+    <Compile Include="UI\DrugOrderForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DrugOrderForm.Designer.cs">
+    <Compile Include="UI\DrugOrderForm.Designer.cs">
       <DependentUpon>DrugOrderForm.cs</DependentUpon>
     </Compile>
     <Compile Include="lib\googling_VerticalTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
+    <Compile Include="UI\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainDrugs.cs">
+    <Compile Include="UI\MainDrugs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainDrugs.Designer.cs">
+    <Compile Include="UI\MainDrugs.Designer.cs">
       <DependentUpon>MainDrugs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Drug.cs" />
+    <Compile Include="model\Drug.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="DrugCompInfo_Form.resx">
+    <EmbeddedResource Include="UI\DrugCompInfo_Form.resx">
       <DependentUpon>DrugCompInfo_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DrugOrderForm.resx">
+    <EmbeddedResource Include="UI\DrugOrderForm.resx">
       <DependentUpon>DrugOrderForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainDrugs.resx">
+    <EmbeddedResource Include="UI\MainDrugs.resx">
       <DependentUpon>MainDrugs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
