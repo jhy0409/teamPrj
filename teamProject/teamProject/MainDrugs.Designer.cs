@@ -30,11 +30,6 @@ namespace teamProject
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.company = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.order_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
@@ -49,6 +44,11 @@ namespace teamProject
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.company = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.order_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -57,6 +57,7 @@ namespace teamProject
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.company,
@@ -70,31 +71,6 @@ namespace teamProject
             this.dataGridView1.Size = new System.Drawing.Size(984, 542);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // company
-            // 
-            this.company.HeaderText = "제조사";
-            this.company.Name = "company";
-            // 
-            // name
-            // 
-            this.name.HeaderText = "약품명";
-            this.name.Name = "name";
-            // 
-            // order_num
-            // 
-            this.order_num.HeaderText = "주문수량";
-            this.order_num.Name = "order_num";
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "재고수량";
-            this.quantity.Name = "quantity";
-            // 
-            // etc
-            // 
-            this.etc.HeaderText = "비고";
-            this.etc.Name = "etc";
             // 
             // textBox1
             // 
@@ -228,6 +204,34 @@ namespace teamProject
             this.label1.TabIndex = 0;
             this.label1.Text = "약품명";
             // 
+            // company
+            // 
+            this.company.HeaderText = "제조사";
+            this.company.Name = "company";
+            this.company.Width = 160;
+            // 
+            // name
+            // 
+            this.name.HeaderText = "약품명";
+            this.name.Name = "name";
+            this.name.Width = 250;
+            // 
+            // order_num
+            // 
+            this.order_num.HeaderText = "주문수량";
+            this.order_num.Name = "order_num";
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "재고수량";
+            this.quantity.Name = "quantity";
+            // 
+            // etc
+            // 
+            this.etc.HeaderText = "비고";
+            this.etc.Name = "etc";
+            this.etc.Width = 150;
+            // 
             // MainDrugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -239,6 +243,7 @@ namespace teamProject
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainDrugs";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -263,11 +268,6 @@ namespace teamProject
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn company;
-        private System.Windows.Forms.DataGridViewTextBoxColumn name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn order_num;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn etc;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
@@ -276,5 +276,10 @@ namespace teamProject
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn company;
+        private System.Windows.Forms.DataGridViewTextBoxColumn name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn order_num;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn etc;
     }
 }
