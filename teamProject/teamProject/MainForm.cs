@@ -22,5 +22,10 @@ namespace teamProject
         {
             new DrugCompInfo_Form().ShowDialog();
         }
+
+        private void btn_mainDrugs_Click(object sender, EventArgs e)
+        {
+            new MainDrugs().ShowDialog();
+        }
     }
 }

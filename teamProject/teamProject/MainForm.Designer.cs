@@ -59,6 +59,7 @@ namespace teamProject
             this.btn_mainDrugs.TabIndex = 1;
             this.btn_mainDrugs.Text = "약품정보";
             this.btn_mainDrugs.UseVisualStyleBackColor = true;
+            this.btn_mainDrugs.Click += new System.EventHandler(this.btn_mainDrugs_Click);
             // 
             // btn_main_order
             // 

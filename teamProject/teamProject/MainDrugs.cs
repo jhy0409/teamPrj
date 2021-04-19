@@ -20,16 +20,6 @@ namespace teamProject
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string url = "http://apis.data.go.kr/1470000/DURPrdlstInfoService";
-            XElement xElement = XElement.Load(url);
-            var xmlQuery = from item in xElement.Descendants("data")
-                           select item;
-
-            foreach(var item in xmlQuery)
-            {
-                
-            }
-
         }
     }
 }

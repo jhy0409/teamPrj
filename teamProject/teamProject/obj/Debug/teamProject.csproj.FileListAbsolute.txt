@@ -34,3 +34,6 @@ C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamPr
 C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.exe
 C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.pdb
 >>>>>>> Stashed changes
+C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.DrugCompInfo_Form.resources
+C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.DrugOrderForm.resources
+C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.MainForm.resources
