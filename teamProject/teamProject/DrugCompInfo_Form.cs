@@ -16,5 +16,13 @@ namespace teamProject
         {
             InitializeComponent();
         }
+<<<<<<< Updated upstream:teamProject/teamProject/DrugCompInfo_Form.cs
+=======
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            new MainDrugs().ShowDialog();
+        }
+>>>>>>> Stashed changes:teamProject/teamProject/Form1.cs
     }
 }
