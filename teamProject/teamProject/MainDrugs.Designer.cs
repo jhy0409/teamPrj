@@ -30,25 +30,25 @@ namespace teamProject
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
-            this.button1 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.company = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.order_num = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.etc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.domainUpDown1 = new System.Windows.Forms.DomainUpDown();
+            this.button1 = new System.Windows.Forms.Button();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -67,9 +67,34 @@ namespace teamProject
             this.dataGridView1.Location = new System.Drawing.Point(12, 119);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(984, 404);
+            this.dataGridView1.Size = new System.Drawing.Size(984, 542);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // company
+            // 
+            this.company.HeaderText = "제조사";
+            this.company.Name = "company";
+            // 
+            // name
+            // 
+            this.name.HeaderText = "약품명";
+            this.name.Name = "name";
+            // 
+            // order_num
+            // 
+            this.order_num.HeaderText = "주문수량";
+            this.order_num.Name = "order_num";
+            // 
+            // quantity
+            // 
+            this.quantity.HeaderText = "재고수량";
+            this.quantity.Name = "quantity";
+            // 
+            // etc
+            // 
+            this.etc.HeaderText = "비고";
+            this.etc.Name = "etc";
             // 
             // textBox1
             // 
@@ -90,6 +115,23 @@ namespace teamProject
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "약품 정보 조회";
             // 
+            // domainUpDown1
+            // 
+            this.domainUpDown1.Location = new System.Drawing.Point(5, 68);
+            this.domainUpDown1.Name = "domainUpDown1";
+            this.domainUpDown1.Size = new System.Drawing.Size(120, 27);
+            this.domainUpDown1.TabIndex = 5;
+            this.domainUpDown1.Text = "검색조건";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(379, 67);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 27);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "검색하기";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
@@ -109,23 +151,6 @@ namespace teamProject
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "재고많은순";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // domainUpDown1
-            // 
-            this.domainUpDown1.Location = new System.Drawing.Point(5, 68);
-            this.domainUpDown1.Name = "domainUpDown1";
-            this.domainUpDown1.Size = new System.Drawing.Size(120, 27);
-            this.domainUpDown1.TabIndex = 5;
-            this.domainUpDown1.Text = "검색조건";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(379, 67);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 27);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "검색하기";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
@@ -153,37 +178,14 @@ namespace teamProject
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "약품 주문/취소";
             // 
-            // label1
+            // button3
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "약품명";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 67);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "주문/취소 수량";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(121, 24);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(121, 64);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 27);
-            this.textBox3.TabIndex = 3;
+            this.button3.Location = new System.Drawing.Point(247, 61);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 30);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "취소하기";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
@@ -194,39 +196,37 @@ namespace teamProject
             this.button2.Text = "주문하기";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // textBox3
             // 
-            this.button3.Location = new System.Drawing.Point(247, 61);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "취소하기";
-            this.button3.UseVisualStyleBackColor = true;
+            this.textBox3.Location = new System.Drawing.Point(121, 64);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 27);
+            this.textBox3.TabIndex = 3;
             // 
-            // company
+            // textBox2
             // 
-            this.company.HeaderText = "제조사";
-            this.company.Name = "company";
+            this.textBox2.Location = new System.Drawing.Point(121, 24);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 27);
+            this.textBox2.TabIndex = 2;
             // 
-            // name
+            // label2
             // 
-            this.name.HeaderText = "약품명";
-            this.name.Name = "name";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(6, 67);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(110, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "주문/취소 수량";
             // 
-            // order_num
+            // label1
             // 
-            this.order_num.HeaderText = "주문수량";
-            this.order_num.Name = "order_num";
-            // 
-            // quantity
-            // 
-            this.quantity.HeaderText = "재고수량";
-            this.quantity.Name = "quantity";
-            // 
-            // etc
-            // 
-            this.etc.HeaderText = "비고";
-            this.etc.Name = "etc";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(61, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(54, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "약품명";
             // 
             // MainDrugs
             // 
