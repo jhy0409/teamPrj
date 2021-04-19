@@ -52,6 +52,9 @@
     <Compile Include="DrugComp_info.Designer.cs">
       <DependentUpon>DrugComp_info.cs</DependentUpon>
     </Compile>
+    <Compile Include="lib\googling_VerticalTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

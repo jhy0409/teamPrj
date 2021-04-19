@@ -34,6 +34,7 @@ namespace teamProject
             this.label2 = new System.Windows.Forms.Label();
             this.compSubTitle = new System.Windows.Forms.Label();
             this.compName = new System.Windows.Forms.Label();
+            this.compName_txtBox = new VerticalTextBox();
             this.SuspendLayout();
             // 
             // compTitle
@@ -80,11 +81,23 @@ namespace teamProject
             // 
             this.compName.AutoSize = true;
             this.compName.Font = new System.Drawing.Font("맑은 고딕", 11F);
-            this.compName.Location = new System.Drawing.Point(40, 523);
+            this.compName.Location = new System.Drawing.Point(40, 531);
             this.compName.Name = "compName";
             this.compName.Size = new System.Drawing.Size(69, 20);
             this.compName.TabIndex = 4;
             this.compName.Text = "회사이름";
+            // 
+            // compName_txtBox
+            // 
+            this.compName_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compName_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compName_txtBox.Font = new System.Drawing.Font("굴림", 11F);
+            this.compName_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compName_txtBox.Location = new System.Drawing.Point(133, 523);
+            this.compName_txtBox.Name = "compName_txtBox";
+            this.compName_txtBox.Size = new System.Drawing.Size(212, 37);
+            this.compName_txtBox.TabIndex = 5;
+            this.compName_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // DrugComp_info
             // 
@@ -92,6 +105,7 @@ namespace teamProject
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.compName_txtBox);
             this.Controls.Add(this.compName);
             this.Controls.Add(this.compSubTitle);
             this.Controls.Add(this.label2);
@@ -113,5 +127,6 @@ namespace teamProject
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label compSubTitle;
         private System.Windows.Forms.Label compName;
+        private VerticalTextBox compName_txtBox;
     }
 }
