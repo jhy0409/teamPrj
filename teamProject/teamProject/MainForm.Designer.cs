@@ -47,6 +47,7 @@ namespace teamProject
             this.btn_mainDrugComp.TabIndex = 0;
             this.btn_mainDrugComp.Text = "제약사\r\n정보 조회";
             this.btn_mainDrugComp.UseVisualStyleBackColor = true;
+            this.btn_mainDrugComp.Click += new System.EventHandler(this.btn_mainDrugComp_Click);
             // 
             // btn_mainDrugs
             // 
@@ -58,7 +59,6 @@ namespace teamProject
             this.btn_mainDrugs.TabIndex = 1;
             this.btn_mainDrugs.Text = "약품정보";
             this.btn_mainDrugs.UseVisualStyleBackColor = true;
-            this.btn_mainDrugs.Click += new System.EventHandler(this.button2_Click);
             // 
             // btn_main_order
             // 

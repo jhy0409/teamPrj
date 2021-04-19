@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace teamProject
 {
-    public partial class MainForm : Form
+    public partial class DrugComp_info : Form
     {
-        public MainForm()
+        public DrugComp_info()
         {
             InitializeComponent();
-        }
-
-
-        private void btn_mainDrugComp_Click(object sender, EventArgs e)
-        {
-            new DrugComp_info().ShowDialog();
         }
     }
 }
