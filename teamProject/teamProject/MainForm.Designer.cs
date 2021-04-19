@@ -41,7 +41,7 @@ namespace teamProject
             // 
             this.btn_mainDrugComp.FlatAppearance.BorderSize = 0;
             this.btn_mainDrugComp.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_mainDrugComp.Location = new System.Drawing.Point(311, 414);
+            this.btn_mainDrugComp.Location = new System.Drawing.Point(311, 436);
             this.btn_mainDrugComp.Name = "btn_mainDrugComp";
             this.btn_mainDrugComp.Size = new System.Drawing.Size(120, 120);
             this.btn_mainDrugComp.TabIndex = 0;
@@ -53,7 +53,7 @@ namespace teamProject
             // 
             this.btn_mainDrugs.FlatAppearance.BorderSize = 0;
             this.btn_mainDrugs.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_mainDrugs.Location = new System.Drawing.Point(445, 414);
+            this.btn_mainDrugs.Location = new System.Drawing.Point(445, 436);
             this.btn_mainDrugs.Name = "btn_mainDrugs";
             this.btn_mainDrugs.Size = new System.Drawing.Size(120, 120);
             this.btn_mainDrugs.TabIndex = 1;
@@ -65,7 +65,7 @@ namespace teamProject
             // 
             this.btn_main_order.FlatAppearance.BorderSize = 0;
             this.btn_main_order.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_main_order.Location = new System.Drawing.Point(579, 414);
+            this.btn_main_order.Location = new System.Drawing.Point(579, 436);
             this.btn_main_order.Name = "btn_main_order";
             this.btn_main_order.Size = new System.Drawing.Size(120, 120);
             this.btn_main_order.TabIndex = 3;
@@ -88,7 +88,7 @@ namespace teamProject
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1008, 637);
+            this.ClientSize = new System.Drawing.Size(1008, 729);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_main_order);
             this.Controls.Add(this.btn_mainDrugs);
