@@ -37,3 +37,4 @@ C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamPr
 C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.DrugCompInfo_Form.resources
 C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.DrugOrderForm.resources
 C:\Users\KB\Desktop\TeamProject\teamPrj\teamProject\teamProject\obj\Debug\teamProject.MainForm.resources
+D:\임시\Git\teamPrj\teamProject\teamProject\obj\Debug\teamProject.MainDrugs.resources
