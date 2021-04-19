@@ -1,0 +1,10 @@
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\bin\Debug\teamProject.exe.config
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\bin\Debug\teamProject.exe
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\bin\Debug\teamProject.pdb
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\obj\Debug\teamProject.csprojAssemblyReference.cache
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\obj\Debug\teamProject.Form1.resources
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\obj\Debug\teamProject.Properties.Resources.resources
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\obj\Debug\teamProject.csproj.GenerateResource.cache
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\obj\Debug\teamProject.csproj.CoreCompileInputs.cache
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\obj\Debug\teamProject.exe
+C:\Users\KB\Desktop\csharp\teamProject\teamProject\obj\Debug\teamProject.pdb
