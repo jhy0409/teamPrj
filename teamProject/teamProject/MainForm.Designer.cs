@@ -1,7 +1,7 @@
 ﻿
 namespace teamProject
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// 필수 디자이너 변수입니다.
@@ -29,27 +29,32 @@ namespace teamProject
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.btn_mainDrugComp = new System.Windows.Forms.Button();
             this.btn_mainDrugs = new System.Windows.Forms.Button();
             this.btn_main_order = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_mainDrugComp
             // 
+            this.btn_mainDrugComp.FlatAppearance.BorderSize = 0;
             this.btn_mainDrugComp.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_mainDrugComp.Location = new System.Drawing.Point(12, 12);
+            this.btn_mainDrugComp.Location = new System.Drawing.Point(311, 414);
             this.btn_mainDrugComp.Name = "btn_mainDrugComp";
-            this.btn_mainDrugComp.Size = new System.Drawing.Size(134, 36);
+            this.btn_mainDrugComp.Size = new System.Drawing.Size(120, 120);
             this.btn_mainDrugComp.TabIndex = 0;
-            this.btn_mainDrugComp.Text = "제약사 정보 조회";
+            this.btn_mainDrugComp.Text = "제약사\r\n정보 조회";
             this.btn_mainDrugComp.UseVisualStyleBackColor = true;
             // 
             // btn_mainDrugs
             // 
+            this.btn_mainDrugs.FlatAppearance.BorderSize = 0;
             this.btn_mainDrugs.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_mainDrugs.Location = new System.Drawing.Point(167, 12);
+            this.btn_mainDrugs.Location = new System.Drawing.Point(445, 414);
             this.btn_mainDrugs.Name = "btn_mainDrugs";
-            this.btn_mainDrugs.Size = new System.Drawing.Size(86, 36);
+            this.btn_mainDrugs.Size = new System.Drawing.Size(120, 120);
             this.btn_mainDrugs.TabIndex = 1;
             this.btn_mainDrugs.Text = "약품정보";
             this.btn_mainDrugs.UseVisualStyleBackColor = true;
@@ -57,24 +62,41 @@ namespace teamProject
             // 
             // btn_main_order
             // 
+            this.btn_main_order.FlatAppearance.BorderSize = 0;
             this.btn_main_order.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_main_order.Location = new System.Drawing.Point(280, 12);
+            this.btn_main_order.Location = new System.Drawing.Point(579, 414);
             this.btn_main_order.Name = "btn_main_order";
-            this.btn_main_order.Size = new System.Drawing.Size(86, 36);
+            this.btn_main_order.Size = new System.Drawing.Size(120, 120);
             this.btn_main_order.TabIndex = 3;
             this.btn_main_order.Text = "주문관리";
             this.btn_main_order.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(325, 154);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(374, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_main_order);
             this.Controls.Add(this.btn_mainDrugs);
             this.Controls.Add(this.btn_mainDrugComp);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "MainForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "온누리약국 재고관리 프로그램 v1.0";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -84,6 +106,7 @@ namespace teamProject
         private System.Windows.Forms.Button btn_mainDrugComp;
         private System.Windows.Forms.Button btn_mainDrugs;
         private System.Windows.Forms.Button btn_main_order;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
