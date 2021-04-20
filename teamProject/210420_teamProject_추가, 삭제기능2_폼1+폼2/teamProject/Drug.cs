@@ -10,33 +10,27 @@ namespace teamProject
     {
 
         private string medName;
-        private string medComp;
-        private string medId;
-        private string chart;
-        private string formName;
-        private string className;
-        private string mainIngr;
+        private string medCom;
+        private string medCode;
+        private string medContain;
+        private string medListCode;        
         private int countMed;
 
-        public string MedName { get => medName; set => medName = value; }
-        public string MedComp { get => medComp; set => medComp = value; }
-        public string MedId { get => medId; set => medId = value; }
-        public string Chart { get => chart; set => chart = value; }
-        public string FormName { get => formName; set => formName = value; }
-        public string ClassName { get => className; set => className = value; }
-        public string MainIngr { get => mainIngr; set => mainIngr = value; }
-        public int CountMed { get => countMed; set => countMed = value; }
-
-        public Drug(string medName, string medId, string medComp, string chart,string formName, string className, string mainIngr, int countMed)
+        public Drug(string medName, string medCom, string medCode, string medContain, string medListCode, int countMed)
         {
             this.medName = medName;
-            this.medId = medId;
-            this.medComp = medComp;
-            this.chart = chart;
-            this.formName = formName;
-            this.className = className;
-            this.mainIngr = mainIngr;
+            this.medCom = medCom;
+            this.medCode = medCode;
+            this.medContain = medContain;
+            this.medListCode = medListCode;
             this.countMed = countMed;
         }
+
+        public string MedName { get => medName; set => medName = value; }
+        public string MedCom { get => medCom; set => medCom = value; }
+        public string MedCode { get => medCode; set => medCode = value; }
+        public string MedContain { get => medContain; set => medContain = value; }
+        public string MedListCode { get => medListCode; set => medListCode = value; }
+        public int CountMed { get => countMed; set => countMed = value; }
     }
 }

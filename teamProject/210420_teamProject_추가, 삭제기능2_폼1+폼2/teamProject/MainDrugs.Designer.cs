@@ -44,21 +44,18 @@ namespace teamProject
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.count = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medCompDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.medIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.formNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.classNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mainIngrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.drugBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.medNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medComDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medContainDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.medListCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.countMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -85,11 +82,9 @@ namespace teamProject
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "의약품명",
-            "제조사명",
-            "일련번호",
-            "주성분",
-            "효능효과",
-            "품목기준코드"});
+            "제조사",
+            "품목기준코드",
+            ""});
             this.comboBox1.Location = new System.Drawing.Point(6, 44);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
@@ -201,13 +196,12 @@ namespace teamProject
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.medNameDataGridViewTextBoxColumn,
-            this.medCompDataGridViewTextBoxColumn,
-            this.medIdDataGridViewTextBoxColumn,
-            this.formNameDataGridViewTextBoxColumn,
-            this.classNameDataGridViewTextBoxColumn,
-            this.mainIngrDataGridViewTextBoxColumn,
-            this.count});
-            this.dataGridView1.DataSource = this.drugBindingSource2;
+            this.medComDataGridViewTextBoxColumn,
+            this.medCodeDataGridViewTextBoxColumn,
+            this.medContainDataGridViewTextBoxColumn,
+            this.medListCodeDataGridViewTextBoxColumn,
+            this.countMedDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.drugBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(18, 132);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
@@ -216,10 +210,9 @@ namespace teamProject
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // count
+            // drugBindingSource
             // 
-            this.count.HeaderText = "재고";
-            this.count.Name = "count";
+            this.drugBindingSource.DataSource = typeof(teamProject.Drug);
             // 
             // medNameDataGridViewTextBoxColumn
             // 
@@ -228,47 +221,39 @@ namespace teamProject
             this.medNameDataGridViewTextBoxColumn.Name = "medNameDataGridViewTextBoxColumn";
             this.medNameDataGridViewTextBoxColumn.Width = 150;
             // 
-            // medCompDataGridViewTextBoxColumn
+            // medComDataGridViewTextBoxColumn
             // 
-            this.medCompDataGridViewTextBoxColumn.DataPropertyName = "MedComp";
-            this.medCompDataGridViewTextBoxColumn.HeaderText = "제조사명";
-            this.medCompDataGridViewTextBoxColumn.Name = "medCompDataGridViewTextBoxColumn";
-            this.medCompDataGridViewTextBoxColumn.Width = 150;
+            this.medComDataGridViewTextBoxColumn.DataPropertyName = "MedCom";
+            this.medComDataGridViewTextBoxColumn.HeaderText = "제조사";
+            this.medComDataGridViewTextBoxColumn.Name = "medComDataGridViewTextBoxColumn";
+            this.medComDataGridViewTextBoxColumn.Width = 120;
             // 
-            // medIdDataGridViewTextBoxColumn
+            // medCodeDataGridViewTextBoxColumn
             // 
-            this.medIdDataGridViewTextBoxColumn.DataPropertyName = "MedId";
-            this.medIdDataGridViewTextBoxColumn.HeaderText = "일련번호";
-            this.medIdDataGridViewTextBoxColumn.Name = "medIdDataGridViewTextBoxColumn";
-            this.medIdDataGridViewTextBoxColumn.Width = 120;
+            this.medCodeDataGridViewTextBoxColumn.DataPropertyName = "MedCode";
+            this.medCodeDataGridViewTextBoxColumn.HeaderText = "품목기준코드";
+            this.medCodeDataGridViewTextBoxColumn.Name = "medCodeDataGridViewTextBoxColumn";
+            this.medCodeDataGridViewTextBoxColumn.Width = 150;
             // 
-            // formNameDataGridViewTextBoxColumn
+            // medContainDataGridViewTextBoxColumn
             // 
-            this.formNameDataGridViewTextBoxColumn.DataPropertyName = "FormName";
-            this.formNameDataGridViewTextBoxColumn.HeaderText = "주성분";
-            this.formNameDataGridViewTextBoxColumn.Name = "formNameDataGridViewTextBoxColumn";
-            this.formNameDataGridViewTextBoxColumn.Width = 130;
+            this.medContainDataGridViewTextBoxColumn.DataPropertyName = "MedContain";
+            this.medContainDataGridViewTextBoxColumn.HeaderText = "약효분류코드";
+            this.medContainDataGridViewTextBoxColumn.Name = "medContainDataGridViewTextBoxColumn";
+            this.medContainDataGridViewTextBoxColumn.Width = 150;
             // 
-            // classNameDataGridViewTextBoxColumn
+            // medListCodeDataGridViewTextBoxColumn
             // 
-            this.classNameDataGridViewTextBoxColumn.DataPropertyName = "ClassName";
-            this.classNameDataGridViewTextBoxColumn.HeaderText = "효능효과";
-            this.classNameDataGridViewTextBoxColumn.Name = "classNameDataGridViewTextBoxColumn";
+            this.medListCodeDataGridViewTextBoxColumn.DataPropertyName = "MedListCode";
+            this.medListCodeDataGridViewTextBoxColumn.HeaderText = "약효분류";
+            this.medListCodeDataGridViewTextBoxColumn.Name = "medListCodeDataGridViewTextBoxColumn";
+            this.medListCodeDataGridViewTextBoxColumn.Width = 150;
             // 
-            // mainIngrDataGridViewTextBoxColumn
+            // countMedDataGridViewTextBoxColumn
             // 
-            this.mainIngrDataGridViewTextBoxColumn.DataPropertyName = "MainIngr";
-            this.mainIngrDataGridViewTextBoxColumn.HeaderText = "품목기준코드";
-            this.mainIngrDataGridViewTextBoxColumn.Name = "mainIngrDataGridViewTextBoxColumn";
-            this.mainIngrDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // drugBindingSource
-            // 
-            this.drugBindingSource.DataSource = typeof(teamProject.Drug);
-            // 
-            // drugBindingSource2
-            // 
-            this.drugBindingSource2.DataSource = typeof(teamProject.Drug);
+            this.countMedDataGridViewTextBoxColumn.DataPropertyName = "CountMed";
+            this.countMedDataGridViewTextBoxColumn.HeaderText = "재고";
+            this.countMedDataGridViewTextBoxColumn.Name = "countMedDataGridViewTextBoxColumn";
             // 
             // MainDrugs
             // 
@@ -295,7 +280,6 @@ namespace teamProject
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -314,15 +298,18 @@ namespace teamProject
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.BindingSource drugBindingSource2;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn medNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn medCompDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn medIdDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn formNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn classNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn mainIngrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn count;
         private System.Windows.Forms.BindingSource drugBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medComDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medContainDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn medListCodeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn countMedDataGridViewTextBoxColumn;
     }
 }

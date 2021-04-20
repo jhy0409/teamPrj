@@ -7,7 +7,7 @@ namespace teamProject
 {
     class DataManager_count
     {
-        public static List<EntpCount> Drugc = new List<EntpCount>();        
+        public static List<Drug> Drugc = new List<Drug>();        
                
         static Random r = new Random();
         
@@ -33,16 +33,7 @@ namespace teamProject
                     string tempMedListCode = item.Element("medListCode").Value;
                     int tempMedCount = Convert.ToInt32(item.Element("medCount").Value);
 
-                    EntpCount tempMedi = new EntpCount()
-                    {
-                        medName = tempMedName,
-                        medCom = tempMedCom,
-                        medCode = tempMedCode,
-                        medContain = tempMedContain,
-                        medListCode = tempMedListCode,
-                        medCount = tempMedCount
-                    };
-                    Drugc.Add(tempMedi);
+                    Drugc.Add(new Drug(tempMedName, tempMedCom, tempMedCode, tempMedContain, tempMedListCode, tempMedCount));
                 }
             }
             catch (Exception ex)
@@ -84,12 +75,12 @@ namespace teamProject
                 foreach (var item in Drugc)
                 {
                     drugOutput += "<drug>\n";
-                    drugOutput += $"   <medName>{item.medName}</medName>";
-                    drugOutput += $"   <medCom>{item.medCom}</medCom>";
-                    drugOutput += $"   <medCode>{item.medCode}</medCode>";
-                    drugOutput += $"   <medContain>{item.medContain}</medContain>";
-                    drugOutput += $"   <medListCode>{item.medListCode}</medListCode>";
-                    drugOutput += $"   <medCount>{item.medCount}</medCount>";
+                    drugOutput += $"   <medName>{item.MedName}</medName>";
+                    drugOutput += $"   <medCom>{item.MedCom}</medCom>";
+                    drugOutput += $"   <medCode>{item.MedCode}</medCode>";
+                    drugOutput += $"   <medContain>{item.MedContain}</medContain>";
+                    drugOutput += $"   <medListCode>{item.MedListCode}</medListCode>";
+                    drugOutput += $"   <medCount>{item.CountMed}</medCount>";
                     drugOutput += "</drug>\n";
                 }
             }

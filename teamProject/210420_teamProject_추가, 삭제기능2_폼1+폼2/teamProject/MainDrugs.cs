@@ -13,9 +13,6 @@ namespace teamProject
 {
     public partial class MainDrugs : Form
     {
-        List<Drug> meds = new List<Drug>();
-        DataManager_count mc = new DataManager_count();
-
         public MainDrugs()
         {
             InitializeComponent();
@@ -23,50 +20,27 @@ namespace teamProject
         }
 
         private void MainDrugs_Load(object sender, EventArgs e)
-        {
-            
-            /*string url = "http://apis.data.go.kr/1470000/DURPrdlstInfoService/getUsjntTabooInfoList"; // URL
-            url += "?ServiceKey=" + "Kbg5ok99gLL7L7nQwR3uRoSjPEYTXU2TceiGRQ59%2F6CO%2BzLEl%2F2GcGh4L8BYBXfhtxbTbuUZmGTjb0%2BabDPX6w%3D%3D"; // Service Key
-            XElement element = XElement.Load(url);
-            foreach (var item in element.Descendants("item"))
-            {
-                string medName = item.Element("ITEM_NAME").Value;
-                string medId = item.Element("ITEM_SEQ").Value;
-                string medComp = item.Element("ENTP_NAME").Value;
-                string chart = item.Element("CHART").Value;
-                string formName = item.Element("FORM_NAME").Value;
-                string className = item.Element("CLASS_NAME").Value;
-                string mainIngr = item.Element("MAIN_INGR").Value;
-                int countMed = r.Next(10000);
-
-                meds.Add(new Drug(medName, medId, medComp, chart, formName, className, mainIngr, countMed));
-            }          
-            dataGridView1.DataSource = meds;*/
-
-            foreach (var item in meds)
+        {                       
+            /*foreach (var item in meds)
             {
                 string medName = item.MedName;
-                string medId = item.MedComp;
-                string medComp = item.MedId;
-                string chart = item.Chart;
-                string formName = item.FormName;
-                string className = item.ClassName;
-                string mainIngr = item.MainIngr;
-                int countMed = item.CountMed;
+                string medCom = item.MedCom;
+                string medCode = item.MedCode;
+                string medContain = item.MedContain;
+                string medListCode = item.MedListCode;                
+                int CountMed = item.CountMed1;
 
-                meds.Add(new Drug(medName, medId, medComp, chart, formName, className, mainIngr, countMed));
+                meds.Add(new Drug(medName, medCom, medCode, medContain, medListCode, CountMed));
             }
-            dataGridView1.DataSource = meds;
+            dataGridView1.DataSource = meds;*/
 
             dataGridView1.DataSource = DataManager_count.Drugc;
-            DataManager_count.Save();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {            
             /*Drug drug1 = dataGridView1.CurrentRow.DataBoundItem as Drug;
             textBox2.Text = drug1.MedName;*/
-
             try
             {                
                 EntpCount temp = dataGridView1.CurrentRow.DataBoundItem as EntpCount;
@@ -105,9 +79,10 @@ namespace teamProject
             dataGridView1.DataSource = null;
             List<Drug> tempList = new List<Drug>();
 
+            // 의약품명
             if (comboBox1.SelectedIndex == 0)
-            {                
-                foreach (var item in meds)
+            {
+                foreach (var item in DataManager_count.Drugc)
                 {
                     if (item.MedName.Contains(textBox1.Text))
                     {
@@ -116,61 +91,30 @@ namespace teamProject
                 }
                 dataGridView1.DataSource = tempList;
             }
+            // 제조사
             else if (comboBox1.SelectedIndex == 1)
-            {               
-                foreach (var item in meds)
+            {
+                foreach (var item in DataManager_count.Drugc)
                 {
-                    if (item.MedComp.Contains(textBox1.Text))
+                    if (item.MedCom.Contains(textBox1.Text))
                     {
                         tempList.Add(item);
                     }
                 }
                 dataGridView1.DataSource = tempList;
             }
+            // 품목기준코드
             else if (comboBox1.SelectedIndex == 2)
             {
-                foreach (var item in meds)
+                foreach (var item in DataManager_count.Drugc)
                 {
-                    if (item.MedId.Contains(textBox1.Text))
+                    if (item.MedCode.Contains(textBox1.Text))
                     {
                         tempList.Add(item);
                     }
                 }
                 dataGridView1.DataSource = tempList;
-            }
-            else if (comboBox1.SelectedIndex == 3)
-            {
-                foreach (var item in meds)
-                {
-                    if (item.FormName.Contains(textBox1.Text))
-                    {
-                        tempList.Add(item);
-                    }
-                }
-                dataGridView1.DataSource = tempList;
-            }
-            else if (comboBox1.SelectedIndex == 4)
-            {
-                foreach (var item in meds)
-                {
-                    if (item.ClassName.Contains(textBox1.Text))
-                    {
-                        tempList.Add(item);
-                    }
-                }
-                dataGridView1.DataSource = tempList;
-            }
-            else if (comboBox1.SelectedIndex == 5)
-            {
-                foreach (var item in meds)
-                {
-                    if (item.MainIngr.Contains(textBox1.Text))
-                    {
-                        tempList.Add(item);
-                    }
-                }
-                dataGridView1.DataSource = tempList;
-            }           
+            }                                  
         }               
     }
 }
