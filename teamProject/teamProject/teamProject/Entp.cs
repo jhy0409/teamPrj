@@ -21,5 +21,9 @@ namespace teamProject
                 this.entpAddr = entpAddr;
                 this.entpEmail = entpEmail;
             }
+
+        public Entp()
+        {
         }
+    }
 }

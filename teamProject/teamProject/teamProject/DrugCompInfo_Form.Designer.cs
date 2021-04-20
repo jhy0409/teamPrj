@@ -36,18 +36,19 @@ namespace teamProject
             this.btn_DrugComp_Del = new System.Windows.Forms.Button();
             this.compTel = new System.Windows.Forms.Label();
             this.btn_DrugComp_Add = new System.Windows.Forms.Button();
-            this.compID = new System.Windows.Forms.Label();
+            this.compNa = new System.Windows.Forms.Label();
             this.btn_DrugComp_Search = new System.Windows.Forms.Button();
             this.compSubTitle = new System.Windows.Forms.GroupBox();
             this.drugComp_dtGridView = new System.Windows.Forms.DataGridView();
-            this.compId_txtBox = new VerticalTextBox();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entpBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchName = new System.Windows.Forms.TextBox();
+            this.compNa_txtBox = new VerticalTextBox();
             this.compName_txtBox = new VerticalTextBox();
             this.compTel_txtBox = new VerticalTextBox();
-            this.entpBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.entpNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entpTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entpAddrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entpEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compSubTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugComp_dtGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entpBindingSource)).BeginInit();
@@ -121,16 +122,16 @@ namespace teamProject
             this.btn_DrugComp_Add.Text = "추가";
             this.btn_DrugComp_Add.UseVisualStyleBackColor = true;
             // 
-            // compID
+            // compNa
             // 
-            this.compID.AutoSize = true;
-            this.compID.Font = new System.Drawing.Font("맑은 고딕", 11F);
-            this.compID.Location = new System.Drawing.Point(548, 40);
-            this.compID.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.compID.Name = "compID";
-            this.compID.Size = new System.Drawing.Size(74, 20);
-            this.compID.TabIndex = 11;
-            this.compID.Text = "제약사 ID";
+            this.compNa.AutoSize = true;
+            this.compNa.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.compNa.Location = new System.Drawing.Point(533, 40);
+            this.compNa.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.compNa.Name = "compNa";
+            this.compNa.Size = new System.Drawing.Size(89, 20);
+            this.compNa.TabIndex = 11;
+            this.compNa.Text = "제약사 이름";
             // 
             // btn_DrugComp_Search
             // 
@@ -143,16 +144,15 @@ namespace teamProject
             this.btn_DrugComp_Search.TabIndex = 13;
             this.btn_DrugComp_Search.Text = "검색";
             this.btn_DrugComp_Search.UseVisualStyleBackColor = true;
+            this.btn_DrugComp_Search.Click += new System.EventHandler(this.btn_DrugComp_Search_Click);
             // 
             // compSubTitle
             // 
-            this.compSubTitle.Controls.Add(this.compName_txtBox);
             this.compSubTitle.Controls.Add(this.compName);
             this.compSubTitle.Controls.Add(this.compTel);
             this.compSubTitle.Controls.Add(this.btn_DrugComp_Del);
             this.compSubTitle.Controls.Add(this.btn_DrugComp_Add);
             this.compSubTitle.Controls.Add(this.btn_DrugComp_Edit);
-            this.compSubTitle.Controls.Add(this.compTel_txtBox);
             this.compSubTitle.Font = new System.Drawing.Font("맑은 고딕", 12F);
             this.compSubTitle.Location = new System.Drawing.Point(44, 518);
             this.compSubTitle.Name = "compSubTitle";
@@ -167,29 +167,65 @@ namespace teamProject
             this.drugComp_dtGridView.BackgroundColor = System.Drawing.Color.White;
             this.drugComp_dtGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.drugComp_dtGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.entpNameDataGridViewTextBoxColumn,
-            this.entpTelDataGridViewTextBoxColumn,
-            this.entpAddrDataGridViewTextBoxColumn,
-            this.entpEmailDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4});
             this.drugComp_dtGridView.DataSource = this.entpBindingSource;
             this.drugComp_dtGridView.Location = new System.Drawing.Point(44, 83);
             this.drugComp_dtGridView.Name = "drugComp_dtGridView";
             this.drugComp_dtGridView.RowTemplate.Height = 30;
             this.drugComp_dtGridView.Size = new System.Drawing.Size(920, 407);
             this.drugComp_dtGridView.TabIndex = 15;
+            this.drugComp_dtGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drugComp_dtGridView_CellClick);
             this.drugComp_dtGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drugComp_dtGridView_CellContentClick);
             // 
-            // compId_txtBox
+            // dataGridViewTextBoxColumn1
             // 
-            this.compId_txtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.compId_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compId_txtBox.Font = new System.Drawing.Font("굴림", 11F);
-            this.compId_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compId_txtBox.Location = new System.Drawing.Point(633, 31);
-            this.compId_txtBox.Name = "compId_txtBox";
-            this.compId_txtBox.Size = new System.Drawing.Size(233, 39);
-            this.compId_txtBox.TabIndex = 12;
-            this.compId_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "entpName";
+            this.dataGridViewTextBoxColumn1.HeaderText = "entpName";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "entpTel";
+            this.dataGridViewTextBoxColumn2.HeaderText = "entpTel";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "entpAddr";
+            this.dataGridViewTextBoxColumn3.HeaderText = "entpAddr";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "entpEmail";
+            this.dataGridViewTextBoxColumn4.HeaderText = "entpEmail";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            // 
+            // entpBindingSource
+            // 
+            this.entpBindingSource.DataSource = typeof(teamProject.Entp);
+            // 
+            // searchName
+            // 
+            this.searchName.Location = new System.Drawing.Point(649, 39);
+            this.searchName.Name = "searchName";
+            this.searchName.Size = new System.Drawing.Size(189, 21);
+            this.searchName.TabIndex = 16;
+            // 
+            // compNa_txtBox
+            // 
+            this.compNa_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compNa_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compNa_txtBox.Font = new System.Drawing.Font("굴림", 11F);
+            this.compNa_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compNa_txtBox.Location = new System.Drawing.Point(633, 31);
+            this.compNa_txtBox.Name = "compNa_txtBox";
+            this.compNa_txtBox.Size = new System.Drawing.Size(233, 39);
+            this.compNa_txtBox.TabIndex = 12;
+            this.compNa_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // compName_txtBox
             // 
@@ -215,43 +251,15 @@ namespace teamProject
             this.compTel_txtBox.TabIndex = 9;
             this.compTel_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // entpBindingSource
-            // 
-            this.entpBindingSource.DataSource = typeof(teamProject.Entp);
-            // 
-            // entpNameDataGridViewTextBoxColumn
-            // 
-            this.entpNameDataGridViewTextBoxColumn.DataPropertyName = "entpName";
-            this.entpNameDataGridViewTextBoxColumn.HeaderText = "entpName";
-            this.entpNameDataGridViewTextBoxColumn.Name = "entpNameDataGridViewTextBoxColumn";
-            // 
-            // entpTelDataGridViewTextBoxColumn
-            // 
-            this.entpTelDataGridViewTextBoxColumn.DataPropertyName = "entpTel";
-            this.entpTelDataGridViewTextBoxColumn.HeaderText = "entpTel";
-            this.entpTelDataGridViewTextBoxColumn.Name = "entpTelDataGridViewTextBoxColumn";
-            // 
-            // entpAddrDataGridViewTextBoxColumn
-            // 
-            this.entpAddrDataGridViewTextBoxColumn.DataPropertyName = "entpAddr";
-            this.entpAddrDataGridViewTextBoxColumn.HeaderText = "entpAddr";
-            this.entpAddrDataGridViewTextBoxColumn.Name = "entpAddrDataGridViewTextBoxColumn";
-            // 
-            // entpEmailDataGridViewTextBoxColumn
-            // 
-            this.entpEmailDataGridViewTextBoxColumn.DataPropertyName = "entpEmail";
-            this.entpEmailDataGridViewTextBoxColumn.HeaderText = "entpEmail";
-            this.entpEmailDataGridViewTextBoxColumn.Name = "entpEmailDataGridViewTextBoxColumn";
-            // 
             // DrugCompInfo_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1008, 729);
+            this.Controls.Add(this.searchName);
             this.Controls.Add(this.btn_DrugComp_Search);
-            this.Controls.Add(this.compId_txtBox);
-            this.Controls.Add(this.compID);
+            this.Controls.Add(this.compNa);
             this.Controls.Add(this.compTitle);
             this.Controls.Add(this.compSubTitle);
             this.Controls.Add(this.drugComp_dtGridView);
@@ -279,8 +287,8 @@ namespace teamProject
         private System.Windows.Forms.Label compTel;
         private VerticalTextBox compTel_txtBox;
         private System.Windows.Forms.Button btn_DrugComp_Add;
-        private VerticalTextBox compId_txtBox;
-        private System.Windows.Forms.Label compID;
+        private VerticalTextBox compNa_txtBox;
+        private System.Windows.Forms.Label compNa;
         private System.Windows.Forms.Button btn_DrugComp_Search;
         private System.Windows.Forms.GroupBox compSubTitle;
         private System.Windows.Forms.DataGridView drugComp_dtGridView;
@@ -288,6 +296,11 @@ namespace teamProject
         private System.Windows.Forms.DataGridViewTextBoxColumn entpTelDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn entpAddrDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn entpEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TextBox searchName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.BindingSource entpBindingSource;
     }
 }
