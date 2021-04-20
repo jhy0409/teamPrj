@@ -28,6 +28,10 @@ namespace teamProject
 
         private void btn_mainDrugs_Click(object sender, EventArgs e)
         {
+            for (int i = 0; i < 3; i++)
+            {
+                MessageBox.Show("눈치게임 " + (i+1) + "!");
+            }
         }
     }
 }
