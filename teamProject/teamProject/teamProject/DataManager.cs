@@ -10,13 +10,25 @@ namespace teamProject
 {
     class DataManager
     {
+        static Random r = new Random();
+
         public static List<Entp> Comps = new List<Entp>();
+        static string[] tel = { "010-3524-4767", "010-3733-2356", "010-3764-3362", "010-3763-2723", "010-3622-2263" };
+        static string[] address = { "대구시 동구 신암4동 ", "서울시 동구 신암4동","광주시 동구 신암4동",
+                "인천시 동구 신암4동", "부산시 동구 신암4동"};
+        static string[] email = { "hong@naver.com", "lee@gmail.com", "park@daum.net", "choi@hanmail.net", "kim@gmail.com" };
+
         static DataManager()
         {
             Load();
         }
+
+
         public static void Load()
         {
+
+            
+
             Comps.Clear();
             try
             {
@@ -80,13 +92,27 @@ namespace teamProject
             }
             else // xml파일에 아무것도 없는 경우
             {
-                for (int i = 0; i < 5; i++)
+                string url = "http://apis.data.go.kr/1470000/DURPrdlstInfoService/getUsjntTabooInfoList"; // URL
+                url += "?ServiceKey=" + "Kbg5ok99gLL7L7nQwR3uRoSjPEYTXU2TceiGRQ59%2F6CO%2BzLEl%2F2GcGh4L8BYBXfhtxbTbuUZmGTjb0%2BabDPX6w%3D%3D"; // Service Key
+                XElement element = XElement.Load(url);
+                /*foreach (var item in element.Descendants("item"))
                 {
-                    compOutput += "<comp>\n";
-                    compOutput += $"   <entpName>{i}</entpName>";
-                    compOutput += $"   <entpTel></entpTel>";
-                    compOutput += $"   <entpAddr></entpAddr>";
-                    compOutput += $"   <entpEmail></entpEmail>";
+                    string entpName = item.Element("ENTP_NAME").Value;
+                    string entpTel = tel[r.Next(0, 5)];
+
+                    string entpAddr = address[r.Next(0, 5)];
+                    string entpEmail = email[r.Next(email.Length)];
+
+                    Comps.Add(new Entp(entpName, entpTel, entpAddr, entpEmail));
+                }
+*/
+                foreach (var item in element.Descendants("item"))
+                    {
+                        compOutput += "<comp>\n";
+                    compOutput += $"   <entpName>{item.Element("ENTP_NAME").Value}</entpName>";
+                    compOutput += $"   <entpTel>010-{r.Next(1000,10000)}-{r.Next(1000,10000)}</entpTel>";
+                    compOutput += $"   <entpAddr>{address[r.Next(address.Length)]}</entpAddr>";
+                    compOutput += $"   <entpEmail>{email[r.Next(email.Length)]}</entpEmail>";
                     compOutput += "</comp>\n";
                 }
             }

@@ -267,7 +267,6 @@ namespace teamProject
             this.Name = "DrugCompInfo_Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "DrugComp_info";
-            this.Load += new System.EventHandler(this.DrugCompInfo_Form_Load);
             this.compSubTitle.ResumeLayout(false);
             this.compSubTitle.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugComp_dtGridView)).EndInit();
