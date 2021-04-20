@@ -61,6 +61,13 @@ namespace teamProject
             drugComp_dtGridView.DataSource = null;
             drugComp_dtGridView.DataSource = DataManager.Comps;
         }
+
+        private void btn_DrugComp_Del_Click(object sender, EventArgs e)
+        {
+            int n = drugComp_dtGridView.CurrentCell.RowIndex;
+            DataManager.Comps.RemoveAt(n);
+            resetList();
+        }
     }
 }
 
