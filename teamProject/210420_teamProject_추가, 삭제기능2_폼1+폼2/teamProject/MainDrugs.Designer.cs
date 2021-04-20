@@ -100,6 +100,7 @@ namespace teamProject
             this.button1.Text = "검색하기";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.button1_KeyPress);
             // 
             // checkBox2
             // 
@@ -166,6 +167,7 @@ namespace teamProject
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(179, 27);
             this.textBox3.TabIndex = 3;
+            this.textBox3.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox3_KeyPress);
             // 
             // textBox2
             // 

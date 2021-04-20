@@ -121,17 +121,33 @@ namespace teamProject
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
+                button1.Focus();
+            }
+            if (e.KeyChar == (char)Keys.Tab)
+            {
+                button1.Focus();
+            }
+        }
+
+        private void button1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
                 checkBox1.Focus();
             }
             if (e.KeyChar == (char)Keys.Tab)
             {
-
+                checkBox1.Focus();
             }
         }
 
         private void checkBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)Keys.Enter)
+            {
+                checkBox2.Focus();
+            }
+            if (e.KeyChar == (char)Keys.Tab)
             {
                 checkBox2.Focus();
             }
@@ -143,6 +159,10 @@ namespace teamProject
             {
                 textBox2.Focus();
             }
+            if (e.KeyChar == (char)Keys.Tab)
+            {
+                textBox2.Focus();
+            }
         }
 
         private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,6 +171,22 @@ namespace teamProject
             {
                 textBox3.Focus();
             }
-        }       
+            if (e.KeyChar == (char)Keys.Tab)
+            {
+                textBox3.Focus();
+            }
+        }
+
+        private void textBox3_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                button2.Focus();
+            }
+            if (e.KeyChar == (char)Keys.Tab)
+            {
+                button2.Focus();
+            }
+        }
     }
 }
