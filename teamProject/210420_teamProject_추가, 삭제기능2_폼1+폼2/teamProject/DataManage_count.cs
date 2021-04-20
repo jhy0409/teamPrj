@@ -24,7 +24,7 @@ namespace teamProject
                 string drugOutput = File.ReadAllText(@"./drugInfo.xml");
                 XElement compElement1 = XElement.Parse(drugOutput);
                 // XElement <속성명>데이터1</속성명>
-                foreach (var item in compElement1.Descendants("drugc"))
+                foreach (var item in compElement1.Descendants("drug"))
                 {
                     string tempMedName = item.Element("medName").Value;
                     string tempMedCom = item.Element("medCom").Value;
@@ -90,14 +90,14 @@ namespace teamProject
                 XElement element = getElement();
                 foreach(var item in element.Descendants("item"))
                 {
-                    drugOutput += "<drugc>\n";
+                    drugOutput += "<drug>\n";
                     drugOutput += $"   <medName>{item.Element("ITEM_NAME").Value}</medName>";
                     drugOutput += $"   <medCom>{item.Element("ENTP_NAME").Value}</medCom>";
                     drugOutput += $"   <medCode>{item.Element("ITEM_SEQ").Value}</medCode>";
                     drugOutput += $"   <medContain>{item.Element("MAIN_INGR").Value}</medContain>";
                     drugOutput += $"   <medListCode>{item.Element("CLASS_NAME").Value}</medListCode>";
                     drugOutput += $"   <medCount>{r.Next(1000)}</medCount>";
-                    drugOutput += "</drugc>\n";
+                    drugOutput += "</drug>\n";
                 }
             }
             drugOutput += "</drugc>";
