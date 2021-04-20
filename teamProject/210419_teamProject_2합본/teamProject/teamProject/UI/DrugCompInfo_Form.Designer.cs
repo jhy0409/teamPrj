@@ -168,6 +168,7 @@ namespace teamProject
             this.drugComp_dtGridView.RowTemplate.Height = 30;
             this.drugComp_dtGridView.Size = new System.Drawing.Size(920, 407);
             this.drugComp_dtGridView.TabIndex = 15;
+            this.drugComp_dtGridView.Font = new System.Drawing.Font("맑은 고딕", 12F);
             // 
             // drugComp_name
             // 
