@@ -13,7 +13,7 @@ namespace teamProject
         static Random r = new Random();
 
         public static List<Entp> Comps = new List<Entp>();
-        static string[] tel = { "010-3524-4767", "010-3733-2356", "010-3764-3362", "010-3763-2723", "010-3622-2263" };
+       
         static string[] address = { "대구시 동구 신암4동 ", "서울시 동구 신암4동","광주시 동구 신암4동",
                 "인천시 동구 신암4동", "부산시 동구 신암4동"};
         static string[] email = { "hong@naver.com", "lee@gmail.com", "park@daum.net", "choi@hanmail.net", "kim@gmail.com" };

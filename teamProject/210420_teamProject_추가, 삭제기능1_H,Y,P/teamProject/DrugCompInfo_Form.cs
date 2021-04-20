@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace teamProject
@@ -68,6 +69,60 @@ namespace teamProject
             DataManager.Comps.RemoveAt(n);
             resetList();
         }
+        private void searchName()
+        {
+            System.Collections.Generic.List<Entp> tempComps = new List<Entp>();
+            drugComp_dtGridView.DataSource = null;
+            if (compId_txtBox.Text.Trim() == "")
+            {
+                MessageBox.Show("제약회사 이름을 입력해 주세요!");
+                //함수 종료
+                return;
+            }
+            try
+            {
+                for (int i = 0; i < DataManager.Comps.Count; i++)
+                {
+                    if (DataManager.Comps[i].entpName.Contains(compId_txtBox.Text))
+                    {
+                        tempComps.Add(DataManager.Comps[i]);
+                        //drugComp_dtGridView.DataSource = DataManager.Comps[0].entpName;
+                        //drugComp_dtGridView.DataSource = DataManager.Comps[0].entpTel;
+                        //drugComp_dtGridView.DataSource = DataManager.Comps[0].entpAddr;
+                        //drugComp_dtGridView.DataSource = DataManager.Comps[0].entpEmail;
+
+
+                    }
+                }
+                drugComp_dtGridView.DataSource = tempComps;
+
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("조회 안됨");
+                MessageBox.Show(ex.Message);
+
+
+            }
+        }
+
+        private void btn_DrugComp_Search_Click(object sender, EventArgs e)
+        {
+            searchName();
+        }
+
+        private void compId_txtBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            KeyPreview = true;
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    searchName();
+                    break;
+            }
+        }
+
     }
 }
 
