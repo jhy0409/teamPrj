@@ -44,13 +44,13 @@ namespace teamProject
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.medNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medComDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medContainDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medListCodeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.countMedDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -64,6 +64,7 @@ namespace teamProject
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(242, 27);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // groupBox1
             // 
@@ -110,6 +111,7 @@ namespace teamProject
             this.checkBox2.Text = "재고적은순";
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            this.checkBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkBox2_KeyPress);
             // 
             // checkBox1
             // 
@@ -121,6 +123,7 @@ namespace teamProject
             this.checkBox1.Text = "재고많은순";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.checkBox1_KeyPress);
             // 
             // groupBox2
             // 
@@ -149,11 +152,11 @@ namespace teamProject
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(247, 42);
+            this.button2.Location = new System.Drawing.Point(271, 42);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 30);
+            this.button2.Size = new System.Drawing.Size(74, 30);
             this.button2.TabIndex = 4;
-            this.button2.Text = "주문하기";
+            this.button2.Text = "주문";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -161,15 +164,16 @@ namespace teamProject
             // 
             this.textBox3.Location = new System.Drawing.Point(86, 64);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(155, 27);
+            this.textBox3.Size = new System.Drawing.Size(179, 27);
             this.textBox3.TabIndex = 3;
             // 
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(66, 24);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(175, 27);
+            this.textBox2.Size = new System.Drawing.Size(199, 27);
             this.textBox2.TabIndex = 2;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox2_KeyPress);
             // 
             // label2
             // 
@@ -209,10 +213,6 @@ namespace teamProject
             this.dataGridView1.Size = new System.Drawing.Size(972, 585);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // drugBindingSource
-            // 
-            this.drugBindingSource.DataSource = typeof(teamProject.Drug);
             // 
             // medNameDataGridViewTextBoxColumn
             // 
@@ -254,6 +254,10 @@ namespace teamProject
             this.countMedDataGridViewTextBoxColumn.DataPropertyName = "CountMed";
             this.countMedDataGridViewTextBoxColumn.HeaderText = "재고";
             this.countMedDataGridViewTextBoxColumn.Name = "countMedDataGridViewTextBoxColumn";
+            // 
+            // drugBindingSource
+            // 
+            this.drugBindingSource.DataSource = typeof(teamProject.Drug);
             // 
             // MainDrugs
             // 

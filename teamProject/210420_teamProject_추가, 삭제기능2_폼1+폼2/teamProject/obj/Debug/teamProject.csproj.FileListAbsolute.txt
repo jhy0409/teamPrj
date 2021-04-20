@@ -10,3 +10,4 @@ C:\Users\KB\Desktop\teamproj\teamProject\210420_teamProject_추가, 삭제기능
 C:\Users\KB\Desktop\teamproj\teamProject\210420_teamProject_추가, 삭제기능2_폼1+폼2\teamProject\obj\Debug\teamProject.csproj.CoreCompileInputs.cache
 C:\Users\KB\Desktop\teamproj\teamProject\210420_teamProject_추가, 삭제기능2_폼1+폼2\teamProject\obj\Debug\teamProject.exe
 C:\Users\KB\Desktop\teamproj\teamProject\210420_teamProject_추가, 삭제기능2_폼1+폼2\teamProject\obj\Debug\teamProject.pdb
+C:\Users\KB\Desktop\teamproj\teamProject\210420_teamProject_추가, 삭제기능2_폼1+폼2\teamProject\obj\Debug\teamProject.csprojAssemblyReference.cache

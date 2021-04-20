@@ -43,8 +43,8 @@ namespace teamProject
             textBox2.Text = drug1.MedName;*/
             try
             {                
-                EntpCount temp = dataGridView1.CurrentRow.DataBoundItem as EntpCount;
-                textBox2.Text = temp.medName;
+                Drug temp = dataGridView1.CurrentRow.DataBoundItem as Drug;
+                textBox2.Text = temp.MedName;
             }
             catch (Exception ex)
             {
@@ -115,6 +115,42 @@ namespace teamProject
                 }
                 dataGridView1.DataSource = tempList;
             }                                  
-        }               
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                checkBox1.Focus();
+            }
+            if (e.KeyChar == (char)Keys.Tab)
+            {
+
+            }
+        }
+
+        private void checkBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                checkBox2.Focus();
+            }
+        }
+
+        private void checkBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                textBox2.Focus();
+            }
+        }
+
+        private void textBox2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                textBox3.Focus();
+            }
+        }       
     }
 }
