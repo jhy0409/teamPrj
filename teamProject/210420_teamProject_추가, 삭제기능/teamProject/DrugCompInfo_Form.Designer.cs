@@ -36,22 +36,22 @@ namespace teamProject
             this.compTel = new System.Windows.Forms.Label();
             this.compName = new System.Windows.Forms.Label();
             this.compSubTitle = new System.Windows.Forms.GroupBox();
-            this.drugComp_dtGridView = new System.Windows.Forms.DataGridView();
-            this.compTitle = new System.Windows.Forms.Label();
-            this.compID = new System.Windows.Forms.Label();
-            this.btn_DrugComp_Search = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.compId_txtBox = new VerticalTextBox();
             this.compName_txtBox = new VerticalTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.compEmail_txtBox = new VerticalTextBox();
             this.compAddr_txtBox = new VerticalTextBox();
             this.compTel_txtBox = new VerticalTextBox();
+            this.drugComp_dtGridView = new System.Windows.Forms.DataGridView();
             this.entpNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpAddrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.compTitle = new System.Windows.Forms.Label();
+            this.compID = new System.Windows.Forms.Label();
+            this.btn_DrugComp_Search = new System.Windows.Forms.Button();
+            this.compId_txtBox = new VerticalTextBox();
             this.compSubTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugComp_dtGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entpBindingSource)).BeginInit();
@@ -94,6 +94,7 @@ namespace teamProject
             this.btn_DrugComp_Del.TabIndex = 7;
             this.btn_DrugComp_Del.Text = "삭제";
             this.btn_DrugComp_Del.UseVisualStyleBackColor = true;
+            this.btn_DrugComp_Del.Click += new System.EventHandler(this.btn_DrugComp_Del_Click);
             // 
             // compTel
             // 
@@ -138,67 +139,17 @@ namespace teamProject
             this.compSubTitle.TabStop = false;
             this.compSubTitle.Text = "제약사";
             // 
-            // drugComp_dtGridView
+            // compName_txtBox
             // 
-            this.drugComp_dtGridView.AutoGenerateColumns = false;
-            this.drugComp_dtGridView.BackgroundColor = System.Drawing.Color.White;
-            this.drugComp_dtGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.drugComp_dtGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.entpNameDataGridViewTextBoxColumn,
-            this.entpTelDataGridViewTextBoxColumn,
-            this.entpAddrDataGridViewTextBoxColumn,
-            this.entpEmailDataGridViewTextBoxColumn});
-            this.drugComp_dtGridView.DataSource = this.entpBindingSource;
-            this.drugComp_dtGridView.Location = new System.Drawing.Point(44, 78);
-            this.drugComp_dtGridView.Name = "drugComp_dtGridView";
-            this.drugComp_dtGridView.RowTemplate.Height = 30;
-            this.drugComp_dtGridView.Size = new System.Drawing.Size(920, 407);
-            this.drugComp_dtGridView.TabIndex = 15;
-            this.drugComp_dtGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drugComp_dtGridView_CellClick);
-            // 
-            // compTitle
-            // 
-            this.compTitle.AutoSize = true;
-            this.compTitle.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Bold);
-            this.compTitle.Location = new System.Drawing.Point(39, 26);
-            this.compTitle.Name = "compTitle";
-            this.compTitle.Size = new System.Drawing.Size(150, 25);
-            this.compTitle.TabIndex = 0;
-            this.compTitle.Text = "제약사 정보 조회";
-            // 
-            // compID
-            // 
-            this.compID.AutoSize = true;
-            this.compID.Font = new System.Drawing.Font("맑은 고딕", 11F);
-            this.compID.Location = new System.Drawing.Point(548, 35);
-            this.compID.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.compID.Name = "compID";
-            this.compID.Size = new System.Drawing.Size(74, 20);
-            this.compID.TabIndex = 11;
-            this.compID.Text = "제약사 ID";
-            // 
-            // btn_DrugComp_Search
-            // 
-            this.btn_DrugComp_Search.FlatAppearance.BorderSize = 0;
-            this.btn_DrugComp_Search.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.btn_DrugComp_Search.Location = new System.Drawing.Point(873, 26);
-            this.btn_DrugComp_Search.Margin = new System.Windows.Forms.Padding(5);
-            this.btn_DrugComp_Search.Name = "btn_DrugComp_Search";
-            this.btn_DrugComp_Search.Size = new System.Drawing.Size(91, 39);
-            this.btn_DrugComp_Search.TabIndex = 13;
-            this.btn_DrugComp_Search.Text = "검색";
-            this.btn_DrugComp_Search.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("맑은 고딕", 11F);
-            this.label1.Location = new System.Drawing.Point(521, 38);
-            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "거래처 주소";
+            this.compName_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compName_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compName_txtBox.Font = new System.Drawing.Font("굴림", 11F);
+            this.compName_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compName_txtBox.Location = new System.Drawing.Point(206, 33);
+            this.compName_txtBox.Name = "compName_txtBox";
+            this.compName_txtBox.Size = new System.Drawing.Size(200, 30);
+            this.compName_txtBox.TabIndex = 5;
+            this.compName_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
             // 
@@ -211,29 +162,16 @@ namespace teamProject
             this.label2.TabIndex = 8;
             this.label2.Text = "거래처 이메일";
             // 
-            // compId_txtBox
+            // label1
             // 
-            this.compId_txtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.compId_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compId_txtBox.Font = new System.Drawing.Font("굴림", 11F);
-            this.compId_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compId_txtBox.Location = new System.Drawing.Point(633, 26);
-            this.compId_txtBox.Name = "compId_txtBox";
-            this.compId_txtBox.Size = new System.Drawing.Size(233, 39);
-            this.compId_txtBox.TabIndex = 12;
-            this.compId_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // compName_txtBox
-            // 
-            this.compName_txtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.compName_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compName_txtBox.Font = new System.Drawing.Font("굴림", 11F);
-            this.compName_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compName_txtBox.Location = new System.Drawing.Point(206, 33);
-            this.compName_txtBox.Name = "compName_txtBox";
-            this.compName_txtBox.Size = new System.Drawing.Size(200, 30);
-            this.compName_txtBox.TabIndex = 5;
-            this.compName_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.label1.Location = new System.Drawing.Point(521, 38);
+            this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "거래처 주소";
             // 
             // compEmail_txtBox
             // 
@@ -271,6 +209,24 @@ namespace teamProject
             this.compTel_txtBox.TabIndex = 9;
             this.compTel_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // drugComp_dtGridView
+            // 
+            this.drugComp_dtGridView.AutoGenerateColumns = false;
+            this.drugComp_dtGridView.BackgroundColor = System.Drawing.Color.White;
+            this.drugComp_dtGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.drugComp_dtGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.entpNameDataGridViewTextBoxColumn,
+            this.entpTelDataGridViewTextBoxColumn,
+            this.entpAddrDataGridViewTextBoxColumn,
+            this.entpEmailDataGridViewTextBoxColumn});
+            this.drugComp_dtGridView.DataSource = this.entpBindingSource;
+            this.drugComp_dtGridView.Location = new System.Drawing.Point(44, 78);
+            this.drugComp_dtGridView.Name = "drugComp_dtGridView";
+            this.drugComp_dtGridView.RowTemplate.Height = 30;
+            this.drugComp_dtGridView.Size = new System.Drawing.Size(920, 407);
+            this.drugComp_dtGridView.TabIndex = 15;
+            this.drugComp_dtGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drugComp_dtGridView_CellClick);
+            // 
             // entpNameDataGridViewTextBoxColumn
             // 
             this.entpNameDataGridViewTextBoxColumn.DataPropertyName = "entpName";
@@ -298,6 +254,51 @@ namespace teamProject
             // entpBindingSource
             // 
             this.entpBindingSource.DataSource = typeof(teamProject.Entp);
+            // 
+            // compTitle
+            // 
+            this.compTitle.AutoSize = true;
+            this.compTitle.Font = new System.Drawing.Font("맑은 고딕", 13F, System.Drawing.FontStyle.Bold);
+            this.compTitle.Location = new System.Drawing.Point(39, 26);
+            this.compTitle.Name = "compTitle";
+            this.compTitle.Size = new System.Drawing.Size(150, 25);
+            this.compTitle.TabIndex = 0;
+            this.compTitle.Text = "제약사 정보 조회";
+            // 
+            // compID
+            // 
+            this.compID.AutoSize = true;
+            this.compID.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.compID.Location = new System.Drawing.Point(548, 35);
+            this.compID.Margin = new System.Windows.Forms.Padding(0, 0, 8, 0);
+            this.compID.Name = "compID";
+            this.compID.Size = new System.Drawing.Size(74, 20);
+            this.compID.TabIndex = 11;
+            this.compID.Text = "제약사 ID";
+            // 
+            // btn_DrugComp_Search
+            // 
+            this.btn_DrugComp_Search.FlatAppearance.BorderSize = 0;
+            this.btn_DrugComp_Search.Font = new System.Drawing.Font("맑은 고딕", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_DrugComp_Search.Location = new System.Drawing.Point(873, 26);
+            this.btn_DrugComp_Search.Margin = new System.Windows.Forms.Padding(5);
+            this.btn_DrugComp_Search.Name = "btn_DrugComp_Search";
+            this.btn_DrugComp_Search.Size = new System.Drawing.Size(91, 39);
+            this.btn_DrugComp_Search.TabIndex = 13;
+            this.btn_DrugComp_Search.Text = "검색";
+            this.btn_DrugComp_Search.UseVisualStyleBackColor = true;
+            // 
+            // compId_txtBox
+            // 
+            this.compId_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compId_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compId_txtBox.Font = new System.Drawing.Font("굴림", 11F);
+            this.compId_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compId_txtBox.Location = new System.Drawing.Point(633, 26);
+            this.compId_txtBox.Name = "compId_txtBox";
+            this.compId_txtBox.Size = new System.Drawing.Size(233, 39);
+            this.compId_txtBox.TabIndex = 12;
+            this.compId_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // DrugCompInfo_Form
             // 
