@@ -67,5 +67,83 @@ namespace teamProject
 
             }
         }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.DataSource = null;
+            List<Drug> tempList = new List<Drug>();
+
+            if (comboBox1.SelectedIndex == 0)
+            {
+                foreach (var item in meds)
+                {
+                    if (item.MedName.Contains(textBox1.Text))
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                dataGridView1.DataSource = tempList;
+            }
+            else if (comboBox1.SelectedIndex == 1)
+            {
+                foreach (var item in meds)
+                {
+                    if (item.MedComp.Contains(textBox1.Text))
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                dataGridView1.DataSource = tempList;
+            }
+            else if (comboBox1.SelectedIndex == 2)
+            {
+                foreach (var item in meds)
+                {
+                    if (item.MedId.Contains(textBox1.Text))
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                dataGridView1.DataSource = tempList;
+            }
+            else if (comboBox1.SelectedIndex == 3)
+            {
+                foreach (var item in meds)
+                {
+                    if (item.FormName.Contains(textBox1.Text))
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                dataGridView1.DataSource = tempList;
+            }
+            else if (comboBox1.SelectedIndex == 4)
+            {
+                foreach (var item in meds)
+                {
+                    if (item.ClassName.Contains(textBox1.Text))
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                dataGridView1.DataSource = tempList;
+            }
+            else if (comboBox1.SelectedIndex == 5)
+            {
+                foreach (var item in meds)
+                {
+                    if (item.MainIngr.Contains(textBox1.Text))
+                    {
+                        tempList.Add(item);
+                    }
+                }
+                dataGridView1.DataSource = tempList;
+            }
+        }
     }
 }

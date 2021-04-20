@@ -39,7 +39,6 @@ namespace teamProject
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -85,12 +84,12 @@ namespace teamProject
             this.comboBox1.DataSource = this.drugBindingSource;
             this.comboBox1.DisplayMember = "MedName";
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(5, 67);
+            this.comboBox1.Location = new System.Drawing.Point(5, 66);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(120, 28);
-            this.comboBox1.TabIndex = 6;
+            this.comboBox1.TabIndex = 7;
             this.comboBox1.ValueMember = "MedName";
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged_1);
             // 
             // drugBindingSource
             // 
@@ -104,6 +103,7 @@ namespace teamProject
             this.button1.TabIndex = 4;
             this.button1.Text = "검색하기";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // checkBox2
             // 
@@ -140,7 +140,6 @@ namespace teamProject
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
             this.groupBox3.Controls.Add(this.button2);
             this.groupBox3.Controls.Add(this.textBox3);
             this.groupBox3.Controls.Add(this.textBox2);
@@ -153,18 +152,9 @@ namespace teamProject
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "약품 주문/취소";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(247, 61);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "취소하기";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(247, 21);
+            this.button2.Location = new System.Drawing.Point(237, 39);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(98, 30);
             this.button2.TabIndex = 4;
@@ -180,9 +170,9 @@ namespace teamProject
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(121, 24);
+            this.textBox2.Location = new System.Drawing.Point(66, 24);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 27);
+            this.textBox2.Size = new System.Drawing.Size(155, 27);
             this.textBox2.TabIndex = 2;
             // 
             // label2
@@ -197,7 +187,7 @@ namespace teamProject
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 27);
+            this.label1.Location = new System.Drawing.Point(6, 27);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 0;
@@ -302,7 +292,6 @@ namespace teamProject
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;

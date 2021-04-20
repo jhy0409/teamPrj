@@ -45,24 +45,24 @@ namespace teamProject
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.medBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.drugBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.drugBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.medNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medCompDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.medIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.formNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.classNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mainIngrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drugBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.medBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.drugBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.medBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -110,6 +110,7 @@ namespace teamProject
             this.checkBox2.TabIndex = 7;
             this.checkBox2.Text = "재고적은순";
             this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // checkBox1
             // 
@@ -120,6 +121,7 @@ namespace teamProject
             this.checkBox1.TabIndex = 6;
             this.checkBox1.Text = "재고많은순";
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -216,22 +218,6 @@ namespace teamProject
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // drugBindingSource
-            // 
-            this.drugBindingSource.DataSource = typeof(teamProject.Drug);
-            // 
-            // medBindingSource
-            // 
-            this.medBindingSource.DataSource = typeof(teamProject.Drug);
-            // 
-            // drugBindingSource1
-            // 
-            this.drugBindingSource1.DataSource = typeof(teamProject.Drug);
-            // 
-            // drugBindingSource2
-            // 
-            this.drugBindingSource2.DataSource = typeof(teamProject.Drug);
-            // 
             // medNameDataGridViewTextBoxColumn
             // 
             this.medNameDataGridViewTextBoxColumn.DataPropertyName = "MedName";
@@ -268,6 +254,22 @@ namespace teamProject
             this.mainIngrDataGridViewTextBoxColumn.HeaderText = "MainIngr";
             this.mainIngrDataGridViewTextBoxColumn.Name = "mainIngrDataGridViewTextBoxColumn";
             // 
+            // drugBindingSource2
+            // 
+            this.drugBindingSource2.DataSource = typeof(teamProject.Drug);
+            // 
+            // drugBindingSource
+            // 
+            this.drugBindingSource.DataSource = typeof(teamProject.Drug);
+            // 
+            // medBindingSource
+            // 
+            this.medBindingSource.DataSource = typeof(teamProject.Drug);
+            // 
+            // drugBindingSource1
+            // 
+            this.drugBindingSource1.DataSource = typeof(teamProject.Drug);
+            // 
             // MainDrugs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -292,10 +294,10 @@ namespace teamProject
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.medBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.drugBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
