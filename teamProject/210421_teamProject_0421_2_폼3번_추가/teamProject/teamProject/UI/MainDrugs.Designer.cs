@@ -62,7 +62,7 @@ namespace teamProject
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 67);
+            this.textBox1.Location = new System.Drawing.Point(131, 43);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(242, 27);
             this.textBox1.TabIndex = 2;
@@ -85,19 +85,15 @@ namespace teamProject
             this.comboBox1.Items.AddRange(new object[] {
             "품목명",
             "제조회사",
-            "품목번호",
-            "성상",
-            "제형",
-            "약효분류",
-            "주성분"});
-            this.comboBox1.Location = new System.Drawing.Point(6, 66);
+            "품목번호"});
+            this.comboBox1.Location = new System.Drawing.Point(6, 42);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(379, 67);
+            this.button1.Location = new System.Drawing.Point(379, 43);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(89, 27);
             this.button1.TabIndex = 4;
@@ -208,11 +204,11 @@ namespace teamProject
             this.mainIngrDataGridViewTextBoxColumn,
             this.stockDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.drugBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 119);
+            this.dataGridView1.Location = new System.Drawing.Point(13, 133);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(972, 412);
+            this.dataGridView1.Size = new System.Drawing.Size(972, 552);
             this.dataGridView1.TabIndex = 10;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -239,7 +235,7 @@ namespace teamProject
             this.chartDataGridViewTextBoxColumn.DataPropertyName = "Chart";
             this.chartDataGridViewTextBoxColumn.HeaderText = "성상";
             this.chartDataGridViewTextBoxColumn.Name = "chartDataGridViewTextBoxColumn";
-            this.chartDataGridViewTextBoxColumn.Width = 300;
+            this.chartDataGridViewTextBoxColumn.Width = 184;
             // 
             // formNameDataGridViewTextBoxColumn
             // 
@@ -258,13 +254,14 @@ namespace teamProject
             this.mainIngrDataGridViewTextBoxColumn.DataPropertyName = "MainIngr";
             this.mainIngrDataGridViewTextBoxColumn.HeaderText = "주성분";
             this.mainIngrDataGridViewTextBoxColumn.Name = "mainIngrDataGridViewTextBoxColumn";
-            this.mainIngrDataGridViewTextBoxColumn.Width = 170;
+            this.mainIngrDataGridViewTextBoxColumn.Width = 150;
             // 
             // stockDataGridViewTextBoxColumn
             // 
             this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
             this.stockDataGridViewTextBoxColumn.HeaderText = "재고수량";
             this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            this.stockDataGridViewTextBoxColumn.Width = 95;
             // 
             // drugBindingSource
             // 
