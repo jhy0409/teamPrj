@@ -14,13 +14,11 @@ namespace teamProject
 {
     partial class MainDrugs : Form
     {
-        List<DrugOrder> orderList;
         
-        public MainDrugs(List<DrugOrder> orderList)
+        public MainDrugs()
         {
             InitializeComponent();
             comboBox1.Text = "검색기준";
-            this.orderList = orderList;
         }
 
         private void MainDrugs_Load(object sender, EventArgs e)
@@ -99,7 +97,7 @@ namespace teamProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new DrugOrderForm(orderList).ShowDialog();
+            new DrugOrderForm().ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -124,7 +122,7 @@ namespace teamProject
                         orderEntp = item;
                     }
                 }
-                orderList.Add(new DrugOrder(orderDrug, orderEntp, ordercount));
+                DrugOrderForm.orders.Add(new DrugOrder(orderDrug, orderEntp, ordercount));
 
                 /*foreach (var item in orderList)
                 {

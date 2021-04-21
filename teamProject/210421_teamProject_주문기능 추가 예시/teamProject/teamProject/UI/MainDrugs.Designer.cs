@@ -38,6 +38,7 @@ namespace teamProject
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@ namespace teamProject
             this.mainIngrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.stockDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.drugBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -150,6 +150,16 @@ namespace teamProject
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "약품 주문";
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(247, 22);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(98, 30);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "담기";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(247, 61);
@@ -195,6 +205,7 @@ namespace teamProject
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.medNameDataGridViewTextBoxColumn,
@@ -268,16 +279,6 @@ namespace teamProject
             // drugBindingSource
             // 
             this.drugBindingSource.DataSource = typeof(teamProject.Drug);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(247, 22);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(98, 30);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "담기";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // MainDrugs
             // 

@@ -13,12 +13,11 @@ namespace teamProject
 {
     partial class DrugOrderForm : Form
     {
-        private List<DrugOrder> orders;
+        public static List<DrugOrder> orders = new List<DrugOrder>();
 
-        public DrugOrderForm(List<DrugOrder> orders)
+        public DrugOrderForm()
         {
             InitializeComponent();
-            this.orders = orders;
         }
 
         private void DrugOrderForm_Load(object sender, EventArgs e)

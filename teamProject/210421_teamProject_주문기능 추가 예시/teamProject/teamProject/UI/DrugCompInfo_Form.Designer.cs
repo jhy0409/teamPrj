@@ -36,22 +36,22 @@ namespace teamProject
             this.compTel = new System.Windows.Forms.Label();
             this.compName = new System.Windows.Forms.Label();
             this.compSubTitle = new System.Windows.Forms.GroupBox();
-            this.compName_txtBox = new VerticalTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.drugComp_dtGridView = new System.Windows.Forms.DataGridView();
+            this.compTitle = new System.Windows.Forms.Label();
+            this.compID = new System.Windows.Forms.Label();
+            this.btn_DrugComp_Search = new System.Windows.Forms.Button();
+            this.compId_txtBox = new VerticalTextBox();
+            this.compName_txtBox = new VerticalTextBox();
             this.compEmail_txtBox = new VerticalTextBox();
             this.compAddr_txtBox = new VerticalTextBox();
             this.compTel_txtBox = new VerticalTextBox();
-            this.drugComp_dtGridView = new System.Windows.Forms.DataGridView();
             this.entpNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpAddrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.compTitle = new System.Windows.Forms.Label();
-            this.compID = new System.Windows.Forms.Label();
-            this.btn_DrugComp_Search = new System.Windows.Forms.Button();
-            this.compId_txtBox = new VerticalTextBox();
             this.compSubTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugComp_dtGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entpBindingSource)).BeginInit();
@@ -139,18 +139,6 @@ namespace teamProject
             this.compSubTitle.TabStop = false;
             this.compSubTitle.Text = "제약사";
             // 
-            // compName_txtBox
-            // 
-            this.compName_txtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.compName_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compName_txtBox.Font = new System.Drawing.Font("굴림", 11F);
-            this.compName_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compName_txtBox.Location = new System.Drawing.Point(206, 33);
-            this.compName_txtBox.Name = "compName_txtBox";
-            this.compName_txtBox.Size = new System.Drawing.Size(200, 30);
-            this.compName_txtBox.TabIndex = 5;
-            this.compName_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -173,42 +161,6 @@ namespace teamProject
             this.label1.TabIndex = 8;
             this.label1.Text = "거래처 주소";
             // 
-            // compEmail_txtBox
-            // 
-            this.compEmail_txtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.compEmail_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compEmail_txtBox.Font = new System.Drawing.Font("굴림", 11F);
-            this.compEmail_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compEmail_txtBox.Location = new System.Drawing.Point(651, 86);
-            this.compEmail_txtBox.Name = "compEmail_txtBox";
-            this.compEmail_txtBox.Size = new System.Drawing.Size(200, 30);
-            this.compEmail_txtBox.TabIndex = 9;
-            this.compEmail_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // compAddr_txtBox
-            // 
-            this.compAddr_txtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.compAddr_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compAddr_txtBox.Font = new System.Drawing.Font("굴림", 11F);
-            this.compAddr_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compAddr_txtBox.Location = new System.Drawing.Point(651, 33);
-            this.compAddr_txtBox.Name = "compAddr_txtBox";
-            this.compAddr_txtBox.Size = new System.Drawing.Size(200, 30);
-            this.compAddr_txtBox.TabIndex = 9;
-            this.compAddr_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // compTel_txtBox
-            // 
-            this.compTel_txtBox.BackColor = System.Drawing.SystemColors.Window;
-            this.compTel_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compTel_txtBox.Font = new System.Drawing.Font("굴림", 11F);
-            this.compTel_txtBox.LeftRightPadding = ((uint)(10u));
-            this.compTel_txtBox.Location = new System.Drawing.Point(206, 86);
-            this.compTel_txtBox.Name = "compTel_txtBox";
-            this.compTel_txtBox.Size = new System.Drawing.Size(200, 30);
-            this.compTel_txtBox.TabIndex = 9;
-            this.compTel_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // drugComp_dtGridView
             // 
             this.drugComp_dtGridView.AutoGenerateColumns = false;
@@ -226,34 +178,6 @@ namespace teamProject
             this.drugComp_dtGridView.Size = new System.Drawing.Size(920, 407);
             this.drugComp_dtGridView.TabIndex = 15;
             this.drugComp_dtGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.drugComp_dtGridView_CellClick);
-            // 
-            // entpNameDataGridViewTextBoxColumn
-            // 
-            this.entpNameDataGridViewTextBoxColumn.DataPropertyName = "entpName";
-            this.entpNameDataGridViewTextBoxColumn.HeaderText = "entpName";
-            this.entpNameDataGridViewTextBoxColumn.Name = "entpNameDataGridViewTextBoxColumn";
-            // 
-            // entpTelDataGridViewTextBoxColumn
-            // 
-            this.entpTelDataGridViewTextBoxColumn.DataPropertyName = "entpTel";
-            this.entpTelDataGridViewTextBoxColumn.HeaderText = "entpTel";
-            this.entpTelDataGridViewTextBoxColumn.Name = "entpTelDataGridViewTextBoxColumn";
-            // 
-            // entpAddrDataGridViewTextBoxColumn
-            // 
-            this.entpAddrDataGridViewTextBoxColumn.DataPropertyName = "entpAddr";
-            this.entpAddrDataGridViewTextBoxColumn.HeaderText = "entpAddr";
-            this.entpAddrDataGridViewTextBoxColumn.Name = "entpAddrDataGridViewTextBoxColumn";
-            // 
-            // entpEmailDataGridViewTextBoxColumn
-            // 
-            this.entpEmailDataGridViewTextBoxColumn.DataPropertyName = "entpEmail";
-            this.entpEmailDataGridViewTextBoxColumn.HeaderText = "entpEmail";
-            this.entpEmailDataGridViewTextBoxColumn.Name = "entpEmailDataGridViewTextBoxColumn";
-            // 
-            // entpBindingSource
-            // 
-            this.entpBindingSource.DataSource = typeof(teamProject.Entp);
             // 
             // compTitle
             // 
@@ -293,13 +217,93 @@ namespace teamProject
             // 
             this.compId_txtBox.BackColor = System.Drawing.SystemColors.Window;
             this.compId_txtBox.BorderColor = System.Drawing.Color.Gray;
-            this.compId_txtBox.Font = new System.Drawing.Font("굴림", 11F);
+            this.compId_txtBox.Font = new System.Drawing.Font("맑은 고딕", 11F);
             this.compId_txtBox.LeftRightPadding = ((uint)(10u));
             this.compId_txtBox.Location = new System.Drawing.Point(633, 26);
             this.compId_txtBox.Name = "compId_txtBox";
             this.compId_txtBox.Size = new System.Drawing.Size(233, 39);
             this.compId_txtBox.TabIndex = 12;
             this.compId_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // compName_txtBox
+            // 
+            this.compName_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compName_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compName_txtBox.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.compName_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compName_txtBox.Location = new System.Drawing.Point(206, 33);
+            this.compName_txtBox.Name = "compName_txtBox";
+            this.compName_txtBox.Size = new System.Drawing.Size(200, 30);
+            this.compName_txtBox.TabIndex = 5;
+            this.compName_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // compEmail_txtBox
+            // 
+            this.compEmail_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compEmail_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compEmail_txtBox.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.compEmail_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compEmail_txtBox.Location = new System.Drawing.Point(651, 86);
+            this.compEmail_txtBox.Name = "compEmail_txtBox";
+            this.compEmail_txtBox.Size = new System.Drawing.Size(200, 30);
+            this.compEmail_txtBox.TabIndex = 9;
+            this.compEmail_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // compAddr_txtBox
+            // 
+            this.compAddr_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compAddr_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compAddr_txtBox.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.compAddr_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compAddr_txtBox.Location = new System.Drawing.Point(651, 33);
+            this.compAddr_txtBox.Name = "compAddr_txtBox";
+            this.compAddr_txtBox.Size = new System.Drawing.Size(200, 30);
+            this.compAddr_txtBox.TabIndex = 9;
+            this.compAddr_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // compTel_txtBox
+            // 
+            this.compTel_txtBox.BackColor = System.Drawing.SystemColors.Window;
+            this.compTel_txtBox.BorderColor = System.Drawing.Color.Gray;
+            this.compTel_txtBox.Font = new System.Drawing.Font("맑은 고딕", 11F);
+            this.compTel_txtBox.LeftRightPadding = ((uint)(10u));
+            this.compTel_txtBox.Location = new System.Drawing.Point(206, 86);
+            this.compTel_txtBox.Name = "compTel_txtBox";
+            this.compTel_txtBox.Size = new System.Drawing.Size(200, 30);
+            this.compTel_txtBox.TabIndex = 9;
+            this.compTel_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // entpNameDataGridViewTextBoxColumn
+            // 
+            this.entpNameDataGridViewTextBoxColumn.DataPropertyName = "entpName";
+            this.entpNameDataGridViewTextBoxColumn.HeaderText = "제약사명";
+            this.entpNameDataGridViewTextBoxColumn.Name = "entpNameDataGridViewTextBoxColumn";
+            this.entpNameDataGridViewTextBoxColumn.Width = 180;
+            // 
+            // entpTelDataGridViewTextBoxColumn
+            // 
+            this.entpTelDataGridViewTextBoxColumn.DataPropertyName = "entpTel";
+            this.entpTelDataGridViewTextBoxColumn.HeaderText = "전화번호";
+            this.entpTelDataGridViewTextBoxColumn.Name = "entpTelDataGridViewTextBoxColumn";
+            this.entpTelDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // entpAddrDataGridViewTextBoxColumn
+            // 
+            this.entpAddrDataGridViewTextBoxColumn.DataPropertyName = "entpAddr";
+            this.entpAddrDataGridViewTextBoxColumn.HeaderText = "주소";
+            this.entpAddrDataGridViewTextBoxColumn.Name = "entpAddrDataGridViewTextBoxColumn";
+            this.entpAddrDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // entpEmailDataGridViewTextBoxColumn
+            // 
+            this.entpEmailDataGridViewTextBoxColumn.DataPropertyName = "entpEmail";
+            this.entpEmailDataGridViewTextBoxColumn.HeaderText = "이메일";
+            this.entpEmailDataGridViewTextBoxColumn.Name = "entpEmailDataGridViewTextBoxColumn";
+            this.entpEmailDataGridViewTextBoxColumn.Width = 300;
+            // 
+            // entpBindingSource
+            // 
+            this.entpBindingSource.DataSource = typeof(teamProject.Entp);
             // 
             // DrugCompInfo_Form
             // 
@@ -341,14 +345,14 @@ namespace teamProject
         private System.Windows.Forms.Label label1;
         private VerticalTextBox compEmail_txtBox;
         private VerticalTextBox compAddr_txtBox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entpEmailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entpAddrDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entpTelDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn entpNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridView drugComp_dtGridView;
         private System.Windows.Forms.Label compTitle;
         private System.Windows.Forms.Label compID;
         private VerticalTextBox compId_txtBox;
         private System.Windows.Forms.Button btn_DrugComp_Search;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entpNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entpTelDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entpAddrDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn entpEmailDataGridViewTextBoxColumn;
     }
 }

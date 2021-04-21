@@ -38,9 +38,9 @@ namespace teamProject
             this.orderNum = new System.Windows.Forms.Label();
             this.btn_DrugOrder = new System.Windows.Forms.Button();
             this.ProductCnt_txtBox = new VerticalTextBox();
-            this.DrugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EntpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.EntpName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DrugName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.drugOrder_dtGridView)).BeginInit();
             this.compSubTitle.SuspendLayout();
             this.SuspendLayout();
@@ -155,20 +155,22 @@ namespace teamProject
             this.ProductCnt_txtBox.TabIndex = 9;
             this.ProductCnt_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // DrugName
+            // Count
             // 
-            this.DrugName.HeaderText = "약품 이름";
-            this.DrugName.Name = "DrugName";
+            this.Count.HeaderText = "수량";
+            this.Count.Name = "Count";
             // 
             // EntpName
             // 
             this.EntpName.HeaderText = "제조사";
             this.EntpName.Name = "EntpName";
+            this.EntpName.Width = 400;
             // 
-            // Count
+            // DrugName
             // 
-            this.Count.HeaderText = "수량";
-            this.Count.Name = "Count";
+            this.DrugName.HeaderText = "약품 이름";
+            this.DrugName.Name = "DrugName";
+            this.DrugName.Width = 250;
             // 
             // DrugOrderForm
             // 

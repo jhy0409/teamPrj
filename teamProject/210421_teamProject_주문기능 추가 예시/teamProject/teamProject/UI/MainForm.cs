@@ -13,7 +13,6 @@ namespace teamProject
 {
     public partial class MainForm : Form
     {
-        List<DrugOrder> lists = new List<DrugOrder>();
         public MainForm()
         {
             InitializeComponent();
@@ -26,12 +25,12 @@ namespace teamProject
 
         private void btn_mainDrugs_Click(object sender, EventArgs e)
         {
-            new MainDrugs(lists).ShowDialog();
+            new MainDrugs().ShowDialog();
         }
 
         private void btn_main_order_Click(object sender, EventArgs e)
         {
-            new DrugOrderForm(lists).ShowDialog();
+            new DrugOrderForm().ShowDialog();
         }
     }
 }
