@@ -65,6 +65,7 @@ namespace teamProject
             this.Count});
             this.drugOrder_dtGridView.Location = new System.Drawing.Point(44, 78);
             this.drugOrder_dtGridView.Name = "drugOrder_dtGridView";
+            this.drugOrder_dtGridView.ReadOnly = true;
             this.drugOrder_dtGridView.RowTemplate.Height = 30;
             this.drugOrder_dtGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.drugOrder_dtGridView.Size = new System.Drawing.Size(920, 465);
@@ -75,18 +76,21 @@ namespace teamProject
             // 
             this.DrugName.HeaderText = "약품 이름";
             this.DrugName.Name = "DrugName";
+            this.DrugName.ReadOnly = true;
             this.DrugName.Width = 250;
             // 
             // EntpName
             // 
             this.EntpName.HeaderText = "제조사";
             this.EntpName.Name = "EntpName";
+            this.EntpName.ReadOnly = true;
             this.EntpName.Width = 400;
             // 
             // Count
             // 
             this.Count.HeaderText = "수량";
             this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
             // 
             // compSubTitle
             // 

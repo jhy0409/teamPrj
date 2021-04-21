@@ -99,6 +99,7 @@ namespace teamProject.UI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.sendbutton);
             this.Name = "EmailForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "발주 메일 전송";
             this.Load += new System.EventHandler(this.EmailForm_Load);
             this.ResumeLayout(false);

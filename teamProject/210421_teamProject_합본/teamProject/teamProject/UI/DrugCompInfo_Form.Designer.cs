@@ -47,11 +47,11 @@ namespace teamProject
             this.compEmail_txtBox = new VerticalTextBox();
             this.compAddr_txtBox = new VerticalTextBox();
             this.compTel_txtBox = new VerticalTextBox();
-            this.entpNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entpTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entpAddrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.entpEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.entpBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.entpEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entpAddrDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entpTelDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.entpNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.compSubTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.drugComp_dtGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.entpBindingSource)).BeginInit();
@@ -275,29 +275,9 @@ namespace teamProject
             this.compTel_txtBox.TabIndex = 9;
             this.compTel_txtBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // entpNameDataGridViewTextBoxColumn
+            // entpBindingSource
             // 
-            this.entpNameDataGridViewTextBoxColumn.DataPropertyName = "entpName";
-            this.entpNameDataGridViewTextBoxColumn.HeaderText = "제약사명";
-            this.entpNameDataGridViewTextBoxColumn.Name = "entpNameDataGridViewTextBoxColumn";
-            this.entpNameDataGridViewTextBoxColumn.ReadOnly = true;
-            this.entpNameDataGridViewTextBoxColumn.Width = 180;
-            // 
-            // entpTelDataGridViewTextBoxColumn
-            // 
-            this.entpTelDataGridViewTextBoxColumn.DataPropertyName = "entpTel";
-            this.entpTelDataGridViewTextBoxColumn.HeaderText = "전화번호";
-            this.entpTelDataGridViewTextBoxColumn.Name = "entpTelDataGridViewTextBoxColumn";
-            this.entpTelDataGridViewTextBoxColumn.ReadOnly = true;
-            this.entpTelDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // entpAddrDataGridViewTextBoxColumn
-            // 
-            this.entpAddrDataGridViewTextBoxColumn.DataPropertyName = "entpAddr";
-            this.entpAddrDataGridViewTextBoxColumn.HeaderText = "주소";
-            this.entpAddrDataGridViewTextBoxColumn.Name = "entpAddrDataGridViewTextBoxColumn";
-            this.entpAddrDataGridViewTextBoxColumn.ReadOnly = true;
-            this.entpAddrDataGridViewTextBoxColumn.Width = 200;
+            this.entpBindingSource.DataSource = typeof(teamProject.Entp);
             // 
             // entpEmailDataGridViewTextBoxColumn
             // 
@@ -307,9 +287,29 @@ namespace teamProject
             this.entpEmailDataGridViewTextBoxColumn.ReadOnly = true;
             this.entpEmailDataGridViewTextBoxColumn.Width = 300;
             // 
-            // entpBindingSource
+            // entpAddrDataGridViewTextBoxColumn
             // 
-            this.entpBindingSource.DataSource = typeof(teamProject.Entp);
+            this.entpAddrDataGridViewTextBoxColumn.DataPropertyName = "entpAddr";
+            this.entpAddrDataGridViewTextBoxColumn.HeaderText = "주소";
+            this.entpAddrDataGridViewTextBoxColumn.Name = "entpAddrDataGridViewTextBoxColumn";
+            this.entpAddrDataGridViewTextBoxColumn.ReadOnly = true;
+            this.entpAddrDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // entpTelDataGridViewTextBoxColumn
+            // 
+            this.entpTelDataGridViewTextBoxColumn.DataPropertyName = "entpTel";
+            this.entpTelDataGridViewTextBoxColumn.HeaderText = "전화번호";
+            this.entpTelDataGridViewTextBoxColumn.Name = "entpTelDataGridViewTextBoxColumn";
+            this.entpTelDataGridViewTextBoxColumn.ReadOnly = true;
+            this.entpTelDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // entpNameDataGridViewTextBoxColumn
+            // 
+            this.entpNameDataGridViewTextBoxColumn.DataPropertyName = "entpName";
+            this.entpNameDataGridViewTextBoxColumn.HeaderText = "제약사명";
+            this.entpNameDataGridViewTextBoxColumn.Name = "entpNameDataGridViewTextBoxColumn";
+            this.entpNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.entpNameDataGridViewTextBoxColumn.Width = 180;
             // 
             // DrugCompInfo_Form
             // 

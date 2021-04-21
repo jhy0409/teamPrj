@@ -16,18 +16,10 @@ namespace teamProject
 
         private void DrugOrderForm_Load(object sender, EventArgs e)
         {
-            try
+            foreach (var item in orders)
             {
-                foreach (var item in orders)
-                {
-                    drugOrder_dtGridView.Rows.Add(item.drug.MedName, item.entp.entpName, item.count);
-                }
+                drugOrder_dtGridView.Rows.Add(item.drug.MedName, item.entp.entpName, item.count);
             }
-            catch (Exception)
-            {
-                MessageBox.Show("추가 불가");
-            }
-
         }
 
         private void btn_DrugOrder_Click(object sender, EventArgs e)

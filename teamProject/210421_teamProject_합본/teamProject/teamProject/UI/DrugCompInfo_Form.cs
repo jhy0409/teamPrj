@@ -91,8 +91,6 @@ namespace teamProject
                         //drugComp_dtGridView.DataSource = DataManager_comp.Comps[0].entpTel;
                         //drugComp_dtGridView.DataSource = DataManager_comp.Comps[0].entpAddr;
                         //drugComp_dtGridView.DataSource = DataManager_comp.Comps[0].entpEmail;
-
-
                     }
                 }
                 drugComp_dtGridView.DataSource = tempComps;
@@ -103,8 +101,6 @@ namespace teamProject
             {
                 MessageBox.Show("조회 안됨");
                 MessageBox.Show(ex.Message);
-
-
             }
         }
 
