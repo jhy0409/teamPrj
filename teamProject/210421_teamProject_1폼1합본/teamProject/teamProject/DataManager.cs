@@ -21,7 +21,7 @@ namespace teamProject
             drugs.Clear();
             try
             {
-                string compOutput = File.ReadAllText(@"./drugCompInfo.xml");
+                string compOutput = File.ReadAllText(@"./drugInfo.xml");
                 XElement compElement = XElement.Parse(compOutput);
                 // XElement <속성명>데이터1</속성명>
                 foreach (var item in compElement.Descendants("drug"))
@@ -54,7 +54,7 @@ namespace teamProject
         private static void CreateFile()
         {
             // drugCompInfo.xml파일 생성
-            string fileName = @"./drugCompInfo.xml";
+            string fileName = @"./drugInfo.xml";
             StreamWriter writer = File.CreateText(fileName);
             writer.Dispose();
         }
@@ -108,18 +108,18 @@ namespace teamProject
                 }
             }
             compOutput += "</drugs>";
-            File.WriteAllText(@"./drugCompInfo.xml", compOutput);
+            File.WriteAllText(@"./drugInfo.xml", compOutput);
         }
 
-        public static void printLog(string contents, string name = "drugComp")
+        public static void printLog(string contents, string name = "drug")
         {
-            DirectoryInfo di = new DirectoryInfo("drugComp");
+            DirectoryInfo di = new DirectoryInfo("drug");
             if (!di.Exists)
             {
                 di.Create();
             }
             
-            using (StreamWriter writer = new StreamWriter(@"drugComp\" + name + ".txt", true))
+            using (StreamWriter writer = new StreamWriter(@"drug\" + name + ".txt", true))
             {
                 writer.WriteLine(contents);
             }
