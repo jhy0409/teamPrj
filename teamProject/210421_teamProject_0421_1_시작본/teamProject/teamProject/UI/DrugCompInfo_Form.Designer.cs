@@ -287,6 +287,7 @@ namespace teamProject
             this.btn_DrugComp_Search.TabIndex = 13;
             this.btn_DrugComp_Search.Text = "검색";
             this.btn_DrugComp_Search.UseVisualStyleBackColor = true;
+            this.btn_DrugComp_Search.Click += new System.EventHandler(this.btn_DrugComp_Search_Click);
             // 
             // compId_txtBox
             // 
