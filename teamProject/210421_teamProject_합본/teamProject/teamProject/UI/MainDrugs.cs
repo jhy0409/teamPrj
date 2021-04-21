@@ -17,7 +17,8 @@ namespace teamProject
         public MainDrugs()
         {
             InitializeComponent();
-            comboBox1.Text = "검색기준";
+            //comboBox1.Text = "검색기준";
+            comboBox1.SelectedIndex = 0;
         }
 
         private void MainDrugs_Load(object sender, EventArgs e)
