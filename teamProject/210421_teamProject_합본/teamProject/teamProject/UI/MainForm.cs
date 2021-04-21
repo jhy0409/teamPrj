@@ -35,7 +35,15 @@ namespace teamProject
 
         private void btn_main_order_Click(object sender, EventArgs e)
         {
-            new DrugOrderForm().ShowDialog();
+            if (DrugOrderForm.orders.Count == 0)
+            {
+                MessageBox.Show("추가된 상품이 없습니다.");
+                return;
+            }
+            else
+            {
+                new DrugOrderForm().ShowDialog();
+            }
         }
     }
 }

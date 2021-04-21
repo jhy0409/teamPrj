@@ -219,6 +219,7 @@ namespace teamProject
             this.dataGridView1.DataSource = this.drugBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(13, 133);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(972, 552);
@@ -230,24 +231,28 @@ namespace teamProject
             this.medNameDataGridViewTextBoxColumn.DataPropertyName = "MedName";
             this.medNameDataGridViewTextBoxColumn.HeaderText = "품목명";
             this.medNameDataGridViewTextBoxColumn.Name = "medNameDataGridViewTextBoxColumn";
+            this.medNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // medCompDataGridViewTextBoxColumn
             // 
             this.medCompDataGridViewTextBoxColumn.DataPropertyName = "MedComp";
             this.medCompDataGridViewTextBoxColumn.HeaderText = "제조회사";
             this.medCompDataGridViewTextBoxColumn.Name = "medCompDataGridViewTextBoxColumn";
+            this.medCompDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // medIdDataGridViewTextBoxColumn
             // 
             this.medIdDataGridViewTextBoxColumn.DataPropertyName = "MedId";
             this.medIdDataGridViewTextBoxColumn.HeaderText = "품목번호";
             this.medIdDataGridViewTextBoxColumn.Name = "medIdDataGridViewTextBoxColumn";
+            this.medIdDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // chartDataGridViewTextBoxColumn
             // 
             this.chartDataGridViewTextBoxColumn.DataPropertyName = "Chart";
             this.chartDataGridViewTextBoxColumn.HeaderText = "성상";
             this.chartDataGridViewTextBoxColumn.Name = "chartDataGridViewTextBoxColumn";
+            this.chartDataGridViewTextBoxColumn.ReadOnly = true;
             this.chartDataGridViewTextBoxColumn.Width = 184;
             // 
             // formNameDataGridViewTextBoxColumn
@@ -255,18 +260,21 @@ namespace teamProject
             this.formNameDataGridViewTextBoxColumn.DataPropertyName = "FormName";
             this.formNameDataGridViewTextBoxColumn.HeaderText = "제형";
             this.formNameDataGridViewTextBoxColumn.Name = "formNameDataGridViewTextBoxColumn";
+            this.formNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // classNameDataGridViewTextBoxColumn
             // 
             this.classNameDataGridViewTextBoxColumn.DataPropertyName = "ClassName";
             this.classNameDataGridViewTextBoxColumn.HeaderText = "약효분류";
             this.classNameDataGridViewTextBoxColumn.Name = "classNameDataGridViewTextBoxColumn";
+            this.classNameDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // mainIngrDataGridViewTextBoxColumn
             // 
             this.mainIngrDataGridViewTextBoxColumn.DataPropertyName = "MainIngr";
             this.mainIngrDataGridViewTextBoxColumn.HeaderText = "주성분";
             this.mainIngrDataGridViewTextBoxColumn.Name = "mainIngrDataGridViewTextBoxColumn";
+            this.mainIngrDataGridViewTextBoxColumn.ReadOnly = true;
             this.mainIngrDataGridViewTextBoxColumn.Width = 150;
             // 
             // stockDataGridViewTextBoxColumn
@@ -274,6 +282,7 @@ namespace teamProject
             this.stockDataGridViewTextBoxColumn.DataPropertyName = "Stock";
             this.stockDataGridViewTextBoxColumn.HeaderText = "재고수량";
             this.stockDataGridViewTextBoxColumn.Name = "stockDataGridViewTextBoxColumn";
+            this.stockDataGridViewTextBoxColumn.ReadOnly = true;
             this.stockDataGridViewTextBoxColumn.Width = 95;
             // 
             // drugBindingSource

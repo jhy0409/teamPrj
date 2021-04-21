@@ -96,8 +96,16 @@ namespace teamProject
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new DrugOrderForm().ShowDialog();
-            resetGrid();
+            if (DrugOrderForm.orders.Count <= 0)
+            {
+                MessageBox.Show("물품을 먼저 담아주세요");
+                return;
+            }
+            else
+            {
+                new DrugOrderForm().ShowDialog();
+                resetGrid();
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
