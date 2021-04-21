@@ -69,6 +69,7 @@ namespace teamProject
             DataManager_comp.Comps.RemoveAt(n);
             resetList();
         }
+        
         private void searchName()
         {
             System.Collections.Generic.List<Entp> tempComps = new List<Entp>();
@@ -122,7 +123,6 @@ namespace teamProject
                     break;
             }
         }
-
     }
 }
 
