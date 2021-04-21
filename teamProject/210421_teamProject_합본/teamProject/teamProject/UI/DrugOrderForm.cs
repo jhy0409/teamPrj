@@ -22,7 +22,7 @@ namespace teamProject
             {
                 foreach (var item in orders)
                 {
-                    drugOrder_dtGridView.Rows.Add(item.Drug.MedName, item.Entp.entpName, item.Count);
+                    drugOrder_dtGridView.Rows.Add(item.drug.MedName, item.entp.entpName, item.count);
                 }
             }
             catch (Exception)
@@ -39,34 +39,42 @@ namespace teamProject
             {
                 new UI.EmailForm(item).ShowDialog();
             }
+
+            foreach (var item in orders)
+            {
+                foreach (var item2 in DataManager.drugs)
+                {
+                    if(item.drug == item2)
+                    {
+                        item2.Stock += item.count;
+                    }
+                }
+            }
+            DataManager.Save();
+            MessageBox.Show("주문 완료!!", "주문 완료");
+            Close();
         }
 
         private void drugOrder_dtGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             n = drugOrder_dtGridView.CurrentCell.RowIndex;
             DrugOrder drugorder = orders[n];
-            productName_txtBox.Text = drugorder.Drug.MedName;
-            ProductCnt_txtBox.Text = drugorder.Count.ToString();
+            productName_txtBox.Text = drugorder.drug.MedName;
+            ProductCnt_txtBox.Text = drugorder.count.ToString();
         }
 
         private void btn_DrugCntEdit_Click(object sender, EventArgs e)
         {
             drugOrder_dtGridView.Rows.Clear();
-            /*Entp temp = drugComp_dtGridView.CurrentRow.DataBoundItem as Entp;
-            compName_txtBox.Text = temp.entpName;
-            compTel_txtBox.Text = temp.entpTel;
-            compAddr_txtBox.Text = temp.entpAddr;
-            compEmail_txtBox.Text = temp.entpEmail;*/
-
             DrugOrder temp = orders[n];
-            temp.Drug.MedName = productName_txtBox.Text;
-            temp.Count = int.Parse(ProductCnt_txtBox.Text);
+            temp.drug.MedName = productName_txtBox.Text;
+            temp.count = int.Parse(ProductCnt_txtBox.Text);
 
             try
             {
                 foreach (var item in orders)
                 {
-                    drugOrder_dtGridView.Rows.Add(item.Drug.MedName, item.Entp.entpName, item.Count);
+                    drugOrder_dtGridView.Rows.Add(item.drug.MedName, item.entp.entpName, item.count);
                 }
             }
             catch (Exception)

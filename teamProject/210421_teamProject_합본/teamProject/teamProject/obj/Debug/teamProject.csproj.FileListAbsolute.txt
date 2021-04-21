@@ -26,3 +26,18 @@ C:\Users\KB\Desktop\gkskj\teamProject\210421_teamProject_주문기능 추가 예
 C:\Users\KB\Desktop\gkskj\teamProject\210421_teamProject_주문기능 추가 예시\teamProject\teamProject\obj\Debug\teamProject.csproj.CoreCompileInputs.cache
 C:\Users\KB\Desktop\gkskj\teamProject\210421_teamProject_주문기능 추가 예시\teamProject\teamProject\obj\Debug\teamProject.exe
 C:\Users\KB\Desktop\gkskj\teamProject\210421_teamProject_주문기능 추가 예시\teamProject\teamProject\obj\Debug\teamProject.pdb
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\bin\Debug\teamProject.exe.config
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\bin\Debug\teamProject.exe
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\bin\Debug\teamProject.pdb
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.csprojAssemblyReference.cache
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.DrugCompInfo_Form.resources
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.DrugOrderForm.resources
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.UI.EmailForm.resources
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.UI.Form1.resources
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.MainForm.resources
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.MainDrugs.resources
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.Properties.Resources.resources
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.csproj.GenerateResource.cache
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.csproj.CoreCompileInputs.cache
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.exe
+D:\응용 SW 개발자 과정\TeamProject\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.pdb

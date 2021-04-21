@@ -45,9 +45,9 @@ namespace teamProject.UI
 
         private void EmailForm_Load(object sender, EventArgs e)
         {
-            toAddress_textBox.Text = order.Entp.entpEmail;
-            subject_textBox.Text = order.Drug.MedName;
-            body_textBox.Text = order.Count.ToString();
+            toAddress_textBox.Text = order.entp.entpEmail;
+            subject_textBox.Text = order.drug.MedName;
+            body_textBox.Text = order.count.ToString();
         }
     }
 }

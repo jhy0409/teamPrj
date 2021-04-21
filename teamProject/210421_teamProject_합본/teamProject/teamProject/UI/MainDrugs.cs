@@ -14,7 +14,6 @@ namespace teamProject
 {
     partial class MainDrugs : Form
     {
-        
         public MainDrugs()
         {
             InitializeComponent();
@@ -30,7 +29,6 @@ namespace teamProject
         {
             Drug drug1 = dataGridView1.CurrentRow.DataBoundItem as Drug;
             textBox2.Text = drug1.MedName;
-
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -99,6 +97,7 @@ namespace teamProject
         private void button2_Click(object sender, EventArgs e)
         {
             new DrugOrderForm().ShowDialog();
+            resetGrid();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -124,11 +123,6 @@ namespace teamProject
                     }
                 }
                 DrugOrderForm.orders.Add(new DrugOrder(orderDrug, orderEntp, ordercount));
-
-                /*foreach (var item in orderList)
-                {
-                    MessageBox.Show(item.Drug.MedName + " " + item.Entp.entpName + " " + item.Count.ToString());
-                }*/
                 MessageBox.Show(textBox2.Text + "수량" + textBox3.Text + "개 가 주문서에 추가 되었습니다.");
             }
             
@@ -141,7 +135,12 @@ namespace teamProject
             {
                 MessageBox.Show("약품명을 입력해주세요");
             }
+        }
 
+        public void resetGrid()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = DataManager.drugs;
         }
     }
 }

@@ -35,7 +35,7 @@ namespace teamProject
                     string tempmainIngr = item.Element("mainIngr").Value;
                     string tempstock = item.Element("stock").Value;
 
-                    drugs.Add(new Drug(tempmedName,tempmedId,tempmedComp,tempchart,tempformName,tempclassName,tempmainIngr,int.Parse(tempstock) ));
+                    drugs.Add(new Drug(tempmedName,tempmedId,tempmedComp,tempchart,tempformName,tempclassName,tempmainIngr,int.Parse(tempstock)));
                 }
             }
             catch (Exception ex)
@@ -81,8 +81,8 @@ namespace teamProject
                     compOutput += $"   <medComp>{item.MedComp}</medComp>";
                     compOutput += $"   <medId>{item.MedId}</medId>";
                     compOutput += $"   <chart>{item.Chart}</chart>";
-                    compOutput += $"   <medName>{item.FormName}</medName>";
-                    compOutput += $"   <medName>{item.ClassName}</medName>";
+                    compOutput += $"   <formName>{item.FormName}</formName>";
+                    compOutput += $"   <className>{item.ClassName}</className>";
                     compOutput += $"   <mainIngr>{item.MainIngr}</mainIngr>";
                     compOutput += $"   <stock>{item.Stock}</stock>";
                     compOutput += "</drug>\n";

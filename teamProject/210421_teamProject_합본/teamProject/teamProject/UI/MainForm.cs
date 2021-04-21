@@ -18,6 +18,11 @@ namespace teamProject
             InitializeComponent();
         }
 
+        ~MainForm()
+        {
+            DataManager.Save();
+        }
+
         private void btn_mainDrugComp_Click(object sender, EventArgs e)
         {
             new DrugCompInfo_Form().ShowDialog();

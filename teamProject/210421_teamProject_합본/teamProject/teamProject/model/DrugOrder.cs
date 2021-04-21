@@ -13,8 +13,5 @@
             this.count = count;
         }
 
-        public int Count { get => count; set => count = value; }
-        internal Drug Drug { get => drug; set => drug = value; }
-        internal Entp Entp { get => entp; set => entp = value; }
     }
 }
