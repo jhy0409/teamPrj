@@ -72,14 +72,14 @@ namespace teamProject
         
         private void searchName()
         {
-            System.Collections.Generic.List<Entp> tempComps = new List<Entp>();
-            drugComp_dtGridView.DataSource = null;
             if (compId_txtBox.Text.Trim() == "")
             {
                 MessageBox.Show("제약회사 이름을 입력해 주세요!");
                 //함수 종료
                 return;
             }
+            System.Collections.Generic.List<Entp> tempComps = new List<Entp>();
+            drugComp_dtGridView.DataSource = null;
             try
             {
                 for (int i = 0; i < DataManager_comp.Comps.Count; i++)
