@@ -12,8 +12,6 @@ namespace teamProject
         public DrugOrderForm()
         {
             InitializeComponent();
-
-
         }
 
         private void DrugOrderForm_Load(object sender, EventArgs e)
@@ -27,7 +25,6 @@ namespace teamProject
             }
             catch (Exception)
             {
-
                 MessageBox.Show("추가 불가");
             }
 
@@ -44,7 +41,7 @@ namespace teamProject
             {
                 foreach (var item2 in DataManager.drugs)
                 {
-                    if(item.drug == item2)
+                    if (item.drug == item2)
                     {
                         item2.Stock += item.count;
                     }
@@ -57,10 +54,18 @@ namespace teamProject
 
         private void drugOrder_dtGridView_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            n = drugOrder_dtGridView.CurrentCell.RowIndex;
-            DrugOrder drugorder = orders[n];
-            productName_txtBox.Text = drugorder.drug.MedName;
-            ProductCnt_txtBox.Text = drugorder.count.ToString();
+            try
+            {
+                n = drugOrder_dtGridView.CurrentCell.RowIndex;
+                DrugOrder drugorder = orders[n];
+                productName_txtBox.Text = drugorder.drug.MedName;
+                ProductCnt_txtBox.Text = drugorder.count.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("해당 인덱스에 값이 없습니다.");
+                Console.WriteLine(ex.Message + "\n" + ex.StackTrace);
+            }
         }
 
         private void btn_DrugCntEdit_Click(object sender, EventArgs e)

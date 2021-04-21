@@ -54,3 +54,4 @@ D:\9 임시\Git\teamPrj\teamProject\210421_teamProject_합본\teamProject\teamPr
 D:\9 임시\Git\teamPrj\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.csproj.CoreCompileInputs.cache
 D:\9 임시\Git\teamPrj\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.exe
 D:\9 임시\Git\teamPrj\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.pdb
+D:\9 임시\Git\teamPrj\teamProject\210421_teamProject_합본\teamProject\teamProject\obj\Debug\teamProject.csprojAssemblyReference.cache
