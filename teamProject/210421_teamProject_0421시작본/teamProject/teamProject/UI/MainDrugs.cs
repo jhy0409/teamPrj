@@ -33,17 +33,23 @@ namespace teamProject
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked == true)
+            dataGridView1.DataSource = null;  //데이터그리드뷰 데이터 비우고
+            if (checkBox1.Checked == true) //1번 눌렀을때
             {
                 checkBox2.Checked = false;
+                List<Drug> temp = DataManager.drugs.OrderByDescending(x => x.Stock).ToList(); //temp에 데이터 리스트 넣고 내림차순정렬
+                dataGridView1.DataSource = temp;
             }
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = null;
             if (checkBox2.Checked == true)
             {
                 checkBox1.Checked = false;
+                List<Drug> temp = DataManager.drugs.OrderBy(x => x.Stock).ToList();
+                dataGridView1.DataSource = temp;
             }
         }
 
@@ -85,50 +91,6 @@ namespace teamProject
                 }
                 dataGridView1.DataSource = tempList;
             }
-            else if (comboBox1.SelectedIndex == 3)
-            {
-                foreach (var item in DataManager.drugs)
-                {
-                    if (item.Chart.Contains(textBox1.Text))
-                    {
-                        tempList.Add(item);
-                    }
-                }
-                dataGridView1.DataSource = tempList;
-            }
-            else if (comboBox1.SelectedIndex == 4)
-            {
-                foreach (var item in DataManager.drugs)
-                {
-                    if (item.FormName.Contains(textBox1.Text))
-                    {
-                        tempList.Add(item);
-                    }
-                }
-                dataGridView1.DataSource = tempList;
-            }
-            else if (comboBox1.SelectedIndex == 5)
-            {
-                foreach (var item in DataManager.drugs)
-                {
-                    if (item.ClassName.Contains(textBox1.Text))
-                    {
-                        tempList.Add(item);
-                    }
-                }
-                dataGridView1.DataSource = tempList;
-            }
-            else if (comboBox1.SelectedIndex == 6)
-            {
-                foreach (var item in DataManager.drugs)
-                {
-                    if (item.MainIngr.Contains(textBox1.Text))
-                    {
-                        tempList.Add(item);
-                    }
-                }
-                dataGridView1.DataSource = tempList;
-            }
 
         }
 
@@ -138,7 +100,7 @@ namespace teamProject
             {
                 MessageBox.Show(textBox2.Text + "수량" + textBox3.Text + "개 가 주문서에 추가 되었습니다.");
             }
-            else if (textBox3.Text.Trim() =="")
+            else if (textBox3.Text.Trim() == "")
             {
                 MessageBox.Show("수량을 입력해주세요");
             }
