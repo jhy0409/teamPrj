@@ -14,8 +14,9 @@ namespace teamProject
                 "인천시 동구 신암4동", "부산시 동구 신암4동"};
         static string[] email = { "hong@naver.com", "lee@gmail.com", "park@daum.net", "choi@hanmail.net", "kim@gmail.com" };
         static Random r = new Random();
+        
         static string errMsg;
-        const string FORM_NAME = "제약사 폼";
+        const string FORM_NAME = "dataManager - 제약사";
 
         static DataManager_comp()
         {

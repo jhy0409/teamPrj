@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using teamProject.DataManagers;
 using teamProject.model;
 
 namespace teamProject
@@ -9,6 +10,9 @@ namespace teamProject
     {
         public static List<DrugOrder> orders = new List<DrugOrder>();
         int n;
+
+        static string errMsg;
+        const string FORM_NAME = "약 주문 폼";
         public DrugOrderForm()
         {
             InitializeComponent();
@@ -56,7 +60,8 @@ namespace teamProject
             catch (Exception ex)
             {
                 MessageBox.Show("해당 인덱스에 값이 없습니다.");
-                Console.WriteLine(ex.Message + "\n" + ex.StackTrace);
+                errMsg = $"[폼 위치 : {FORM_NAME}] [ex.Message] : {ex.Message}, \n[ex.StackTrace] : {ex.StackTrace}\n";
+                Printlog.printLog(errMsg, DateTime.Now.ToString("yyyy_MM_dd"));
             }
         }
 
@@ -74,10 +79,11 @@ namespace teamProject
                     drugOrder_dtGridView.Rows.Add(item.drug.MedName, item.entp.entpName, item.count);
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
                 MessageBox.Show("추가 불가");
+                errMsg = $"[폼 위치 : {FORM_NAME}] [ex.Message] : {ex.Message}, \n[ex.StackTrace] : {ex.StackTrace}\n";
+                Printlog.printLog(errMsg, DateTime.Now.ToString("yyyy_MM_dd"));
             }
         }
     }

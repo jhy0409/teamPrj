@@ -21,17 +21,8 @@ namespace teamProject.DataManagers
 
             using (StreamWriter writer = new StreamWriter(@"History\" + date + ".txt", true))
             {
-                writer.WriteLine($"[ {date} ]\t{contents}");
+                writer.WriteLine($"[ {date} ] [오류일시 :{DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss")} ]\n{contents}");
             }
-        }
-
-        public static Printlog getInst()
-        {
-            if (prl == null)
-            {
-                prl = new Printlog();
-            }
-            return prl;
         }
 
     }

@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using teamProject.DataManagers;
 
 namespace teamProject
 {
     public partial class DrugCompInfo_Form : Form
     {
+        static string errMsg;
+        const string FORM_NAME = "제약사 폼";
         public DrugCompInfo_Form()
         {
             InitializeComponent();
@@ -42,6 +45,8 @@ namespace teamProject
             {
                 MessageBox.Show(ex.Message);
                 MessageBox.Show(ex.StackTrace);
+                errMsg = $"[폼 위치 : {FORM_NAME}] [ex.Message] : {ex.Message}, \n[ex.StackTrace] : {ex.StackTrace}\n";
+                Printlog.printLog(errMsg, DateTime.Now.ToString("yyyy_MM_dd"));
             }
         }
 
@@ -101,6 +106,8 @@ namespace teamProject
             {
                 MessageBox.Show("조회 안됨");
                 MessageBox.Show(ex.Message);
+                errMsg = $"[폼 위치 : {FORM_NAME}] [ex.Message] : {ex.Message}, \n[ex.StackTrace] : {ex.StackTrace}\n";
+                Printlog.printLog(errMsg, DateTime.Now.ToString("yyyy_MM_dd"));
             }
         }
 
