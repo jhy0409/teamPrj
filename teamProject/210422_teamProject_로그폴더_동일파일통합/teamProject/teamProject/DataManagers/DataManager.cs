@@ -11,7 +11,6 @@ namespace teamProject
         public static List<Drug> drugs = new List<Drug>();
        
         static Random r = new Random();
-        Printlog prl = Printlog.getInst();
         static string errMsg;
         const string FORM_NAME = "약 정보 폼";
         static DataManager()

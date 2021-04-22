@@ -9,10 +9,6 @@ namespace teamProject.DataManagers
 {
     class Printlog
     {
-
-        public string contents { get; set; }
-        public string date { get; set; }
-
         public static Printlog prl;
 
         public static void printLog(string contents, string date)
