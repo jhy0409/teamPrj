@@ -54,11 +54,11 @@ namespace teamProject
                     Body = body
                 };
                 smtp.Send(message);
-                return "send mail OK";
+                return "발주 메일 전송완료!";
             }
             catch (Exception)
             {
-                return " send mail fail";
+                return " 발주 메일 전송실패1";
             }
             finally
             {
