@@ -191,7 +191,7 @@ namespace teamProject
             this.Controls.Add(this.drugOrder_dtGridView);
             this.Name = "DrugOrderForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "DrugOrderForm";
+            this.Text = "약품 주문";
             this.Load += new System.EventHandler(this.DrugOrderForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.drugOrder_dtGridView)).EndInit();
             this.compSubTitle.ResumeLayout(false);
