@@ -22,6 +22,14 @@ namespace teamProject
 
         private void btn_DrugComp_Add_Click(object sender, EventArgs e)
         {
+            if (compName_txtBox.Text.Trim() == "" || compTel_txtBox.Text.Trim() == "" || compAddr_txtBox.Text.Trim() == "" || compEmail_txtBox.Text.Trim() == "")
+            {
+                string err = "공란이 있습니다.";
+                errMsg = $"[폼 위치 : {FORM_NAME}] [Message] : {"공란이 있습니다."}\n";
+                MessageBox.Show(err);
+                Printlog.printLog(errMsg, DateTime.Now.ToString("yyyy_MM_dd"));
+                return;
+            }
             DataManager_comp.Comps.Add(new Entp(compName_txtBox.Text, compTel_txtBox.Text, compAddr_txtBox.Text, compEmail_txtBox.Text));
             resetList();
             MessageBox.Show("추가되었습니다.", "추가 완료");
@@ -74,7 +82,7 @@ namespace teamProject
             DataManager_comp.Comps.RemoveAt(n);
             resetList();
         }
-        
+
         private void searchName()
         {
             if (compId_txtBox.Text.Trim() == "")

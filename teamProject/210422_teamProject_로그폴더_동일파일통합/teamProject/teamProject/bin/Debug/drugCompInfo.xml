@@ -19,4 +19,8 @@
    <entpName>(주)종근당</entpName>   <entpTel>010-9090-4365</entpTel>   <entpAddr>부산시 동구 신암4동</entpAddr>   <entpEmail>hong@naver.com</entpEmail></comp>
 <comp>
    <entpName>(주)대웅제약</entpName>   <entpTel>010-5417-2545</entpTel>   <entpAddr>인천시 동구 신암4동</entpAddr>   <entpEmail>hong@naver.com</entpEmail></comp>
+<comp>
+   <entpName>sd</entpName>   <entpTel>d</entpTel>   <entpAddr>d</entpAddr>   <entpEmail>d</entpEmail></comp>
+<comp>
+   <entpName>sdf</entpName>   <entpTel>fd</entpTel>   <entpAddr>d</entpAddr>   <entpEmail>d</entpEmail></comp>
 </comps>
